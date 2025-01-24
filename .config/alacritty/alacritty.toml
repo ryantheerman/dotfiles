@@ -1,0 +1,32 @@
+
+[font]
+normal = { family = "3270 Nerd Font Mono", style = "Regular" }
+size = 10.0
+
+[selection]
+save_to_clipboard     = true
+
+[cursor.style]
+shape                 = "Block"
+blinking              = "Always"
+
+[cursor.vi_mode_style]
+shape                 = "Block"
+blinking              = "Always"
+
+[cursor]
+blink_interval        = 600
+blink_timeout         = 0
+unfocused_hollow      = true
+
+[mouse]
+hide_when_typing      = true
+
+[general]
+# automatically reload the config when this file is changed
+live_config_reload = true
+
+# import theme from themes repo
+import = [
+    "~/.config/alacritty/themes/themes/smoooooth.toml"
+]
