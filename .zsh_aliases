@@ -37,7 +37,7 @@ alias dfx='df -H -x tmpfs -x efivarfs'
 
 
 # vcs trigger to add dotfile to git tracked repo
-alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias git-dotfiles="/usr/bin/git --git-dir=$HOME/projects/bare/.dotfiles --work-tree=$HOME"
 
 
 
