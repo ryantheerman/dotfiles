@@ -1,0 +1,15 @@
+# TEST MICROPHONE
+testmic() {arecord -vvv -f dat /dev/null}
+
+# open dictionary output in less
+di() {dict $1 $2 $3 | less}
+
+dieg() {dict -d eng-deu $1 | less}
+
+dige() {dict -d deu-eng $1 | less}
+
+dien() {dict -d gcide $1 | less}
+
+dit() {dict -d moby-thesaurus $1 | less}
+
+dic() {dict -d foldoc $1 | less}

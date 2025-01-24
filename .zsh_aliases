@@ -1,0 +1,47 @@
+# output entire history
+alias history="history 0"
+
+# start ssh-agent when xserver starts
+# alias startx='ssh-agent startx'
+
+# kill xserver
+alias killx="pkill -15 Xorg"
+
+# swap kb layout between us and us dvorak
+alias kb="kb_layout.sh"
+
+# open daybook in vim
+alias daybook="vim ~/notes/daybook"
+
+
+
+### TMUX INSTANCES ###
+# run main-tmux.sh
+alias mt="main-tmux.sh"
+
+# run dev-tmux.sh
+alias dt="dev-tmux.sh"
+
+
+
+#console output color
+#alias ls='ls --color=auto'
+#alias dir'dir --color=auto'
+#alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# output usage stats for the drives I care about
+alias dfx='df -H -x tmpfs -x efivarfs'
+
+
+# vcs trigger to add dotfile to git tracked repo
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+
+
+
+
+# generate password using bw cli with 32 character, min 5 nums, min 5 specials, with mix of upper and lower case characters
+alias passgen="bw generate -nuls --length 32 --minNumber 5 --minSpecial 5"
