@@ -28,3 +28,8 @@ zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
 PROMPT='%F{green}%~%f %F{red}${vcs_info_msg_0_}%f$ '
 
+# Get color support for 'less'
+#export LESS="--RAW-CONTROL-CHARS"
+
+# Use colors for less, man, etc.
+#[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP

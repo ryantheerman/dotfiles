@@ -56,10 +56,16 @@ tztime local {
         format = "%Y-%m-%d %H:%M:%S"
 }
 
+#volume master {
+#        format = "Volume %volume"
+#        format_muted = "Volume muted (%volume)"
+#        device = "sysdefault:CARD=sofhdadsp"
+#}
+
 volume master {
         format = "Volume %volume"
         format_muted = "Volume muted (%volume)"
-        device = "sysdefault:CARD=sofhdadsp"
+        device = "pulse"
 }
 
 read_file uptime {

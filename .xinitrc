@@ -1,6 +1,6 @@
 setxkbmap us -v dvorak
 xset r rate 200 30
-xset s 3600 3600 +dpms
+xset s 1800 1800 +dpms
 xmodmap $HOME/.Xmodmap
 xcape -e 'Hyper_R=Escape'
 xcape -e 'Control_L=Control_L|a'
