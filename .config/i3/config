@@ -15,6 +15,7 @@ set $mod Mod3
 set $primary = eDP-1
 set $left = DP-2-6-8
 set $right = DP-2-6-1-8
+set $HDMI = HDMI-1
 
 # start up terminal on workspace 1
 #exec --no-startup-id i3-msg "workspace 1; exec --no-startup-id alacritty --hold -e ~/scripts/main-tmux.sh"
@@ -196,6 +197,7 @@ workspace $ws4 output  $left     $primary
 workspace $ws6 output  $left     $primary
 workspace $ws8 output  $left     $primary
 workspace $ws10 output $left     $primary
+#workspace $ws10 output $HDMI     $primary
 
 workspace $ws3 output  $right    $primary
 workspace $ws5 output  $right    $primary
