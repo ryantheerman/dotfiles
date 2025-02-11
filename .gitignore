@@ -77,3 +77,5 @@ test.txt
 tmp_logs/
 videos/
 
+.config/ncspot/userstate.cbor
+.config/qBittorrent
