@@ -1,7 +1,7 @@
 
 [font]
 normal = { family = "3270 Nerd Font Mono", style = "Regular" }
-size = 10.0
+size = 13.0
 
 [selection]
 save_to_clipboard     = true
@@ -28,5 +28,5 @@ live_config_reload = true
 
 # import theme from themes repo
 import = [
-    "~/.config/alacritty/themes/themes/smoooooth.toml"
+    "~/.config/alacritty/alacritty-theme/themes/smoooooth.toml"
 ]
