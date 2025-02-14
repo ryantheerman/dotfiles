@@ -56,10 +56,10 @@ exec --no-startup-id nm-applet
 
 # Use amixer to adjust volume.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -c 0 set Master 1%+ && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -c 0 set Master 1%- && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id amixer -c 0 set Master toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 62 +1% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 62 -1% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 62 toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 64 toggle && $refresh_i3status
 
 # Use brightnessctl to adjust screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2% && $refresh_i3status
@@ -99,9 +99,9 @@ bindcode $mod+43 exec --no-startup-id dmenu_run
 # dvorak 'h'
 bindcode $mod+44 focus left
 # dvorak 't'
-bindcode $mod+45 focus down
+bindcode $mod+45 focus up
 # dvorak 'n'
-bindcode $mod+46 focus up
+bindcode $mod+46 focus down
 # dvorak 's'
 bindcode $mod+47 focus right
 
@@ -121,9 +121,9 @@ bindsym $mod+Right focus right
 # dvorak 'h'
 bindcode $mod+Shift+44 move left
 # dvorak 't'
-bindcode $mod+Shift+45 move down
+bindcode $mod+Shift+45 move up
 # dvorak 'n'
-bindcode $mod+Shift+46 move up
+bindcode $mod+Shift+46 move down
 # dvorak 's'
 bindcode $mod+Shift+47 move right
 # alternatively, you can use the cursor keys:
