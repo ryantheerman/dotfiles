@@ -79,3 +79,6 @@ videos/
 
 .config/ncspot/userstate.cbor
 .config/qBittorrent
+
+.backups
+.config/alacritty/alacritty-theme
