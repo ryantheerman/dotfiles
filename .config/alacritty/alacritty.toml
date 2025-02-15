@@ -1,7 +1,7 @@
 
 [font]
 normal = { family = "3270 Nerd Font Mono", style = "Regular" }
-size = 13.0
+size = 12.0
 
 [selection]
 save_to_clipboard     = true
