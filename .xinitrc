@@ -7,6 +7,7 @@ xcape -e 'Control_L=Control_L|a'
 xinput set-button-map 10 1 1 3 4 5 6 7
 unclutter --timeout 5 --jitter 100 --ignore-scrolling &
 xrdb $HOME/.Xresources
+/home/match/scripts/cron/uptime.sh
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_github
 ssh-add ~/.ssh/id_aur
