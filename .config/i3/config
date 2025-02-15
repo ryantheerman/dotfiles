@@ -12,6 +12,7 @@
 # set some variables
 
 set $mod Mod3
+set $refresh_i3status killall -SIGUSR1 i3status
 set $primary = eDP-1
 set $left = DP-2-6-8
 set $right = DP-2-6-1-8
@@ -54,12 +55,11 @@ bindcode $mod+33 exec i3lock -c 000000
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use amixer to adjust volume.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 62 +1% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 62 -1% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 62 toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute 64 toggle && $refresh_i3status
+# Use pactl to adjust volume.
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use brightnessctl to adjust screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +2% && $refresh_i3status
@@ -408,7 +408,7 @@ bar {
 
 ### STARTUP SCRIPTS ###
 # set headphone and speaker volume to 100%
-exec_always --no-startup-id ~/scripts/startup_volume.sh
+#exec_always --no-startup-id ~/scripts/startup_volume.sh
 #exec --no-startup-id ~/scripts/main-tmux.sh
 
 # create modelines, add to outputs, and draw outputs with given modes
