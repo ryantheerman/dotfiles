@@ -265,29 +265,33 @@ for_window [class="^.*"] border none
 mode "applications" {
         # These binding trigger as soon as you enter application mode
 
+        # open firefox
+        # dvorak 'f' for firefox
+        bindcode 29 exec firefox; mode "default"
+
         # open zen (assigned elsewhere to always open on workspace 2)
-        #bindsym f exec zen; exec xdotool key Hyper_R+2; mode "default"
-        # dvorak 'f'
+        #bindsym z exec zen; exec xdotool key Hyper_R+2; mode "default"
+        # dvorak 'z' for zen
         bindcode 61 exec zen; exec xdotool key Hyper_R+2; mode "default"
         
         # open vlc
         #bindsym v exec vlc; exec xdotool key Hyper_R+4; mode "default"
-        # dvorak 'v'
+        # dvorak 'v' for vlc
         bindcode 60 exec vlc; exec xdotool key Hyper_R+4; mode "default"
         
         # open spotify
         #bindsym s exec spotify; exec xdotool key Hyper_R+0; mode "default"
-        # dvorak 's'
-        bindcode 47 exec spotify; exec xdotool key Hyper_R+0; mode "default"
+        # dvorak 's' for spotify
+#        bindcode 47 exec spotify; exec xdotool key Hyper_R+0; mode "default"
 
         # open intellij
         #bindsym i exec idea; exec ~/scripts/i3_ws3_layout.sh; mode "default"
-        # dvorak 'i'
+        # dvorak 'i' for intellij
         bindcode 42 exec idea; exec ~/scripts/i3_ws3_layout.sh; mode "default"
 
         # open vscodium
         #bindsym c exec vscodium; exec xdotool key Hyper_R+6; mode "default"
-        # dvorak 'c'
+        # dvorak 'c' for code
         bindcode 31 exec vscodium; exec xdotool key Hyper_R+5; mode "default"
 
         # back to normal: Enter or Escape or $mod+x
@@ -310,23 +314,28 @@ mode "utilities" {
 
         # toggle redshift on and off
         #bindsym t exec pkill -USR1 '^redshift$'; mode "default"
-        # dvorak 't'
+        # dvorak 't' for temperature
         bindcode 45 exec pkill -USR1 '^redshift$'; mode "default"
 
         # toggle us standard and us dvorak keymap
         #bindsym k exec ~/scripts/kb_layout.sh; mode "default"
-        # dvorak 'k'
+        # dvorak 'k' for keymap
         bindcode 55 exec ~/scripts/kb_layout.sh; mode "default"
 
         # trigger display check and apply display config depending on connected outputs
         #bindsym d exec ~/scripts/startup_display.sh; mode "default"
-        # dvorak 'd'
+        # dvorak 'd' for display
         bindcode 43 exec ~/scripts/startup_display.sh; mode "default"
 
         # screenshot tool
         #bindsym p exec flameshot gui; mode "default"
-        # dvorak 'p'
+        # dvorak 'p' for print screen
         bindcode 27 exec flameshot gui; mode "default"
+
+        # power profiles
+        bindsym 1 exec ~/scripts/power-profile.sh power-saving; mode "default"
+        bindsym 2 exec ~/scripts/power-profile.sh balanced; mode "default"
+        bindsym 3 exec ~/scripts/power-profile.sh performance; mode "default"
 
         # back to normal: Enter or Escape or $mod+c
         bindsym Return mode "default"
