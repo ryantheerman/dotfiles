@@ -1,9 +1,6 @@
 # output entire history
 alias history="history 0"
 
-# start ssh-agent when xserver starts
-# alias startx='ssh-agent startx'
-
 # kill xserver
 alias killx="pkill -15 Xorg"
 
@@ -12,6 +9,11 @@ alias kb="kb_layout.sh"
 
 # open daybook in vim
 alias daybook="vim ~/notes/daybook"
+
+
+# file system
+alias mv="mv -v"
+alias cp="cp -v"
 
 
 
@@ -40,8 +42,3 @@ alias dfx='df -H -x tmpfs -x efivarfs'
 alias git-dotfiles="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.dotfiles --work-tree=$HOME"
 alias git-scripts="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.scripts --work-tree=$HOME/scripts"
 alias git-notes="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.notes --work-tree=$HOME/notes"
-
-
-
-# generate password using bw cli with 32 character, min 5 nums, min 5 specials, with mix of upper and lower case characters
-alias passgen="bw generate -nuls --length 32 --minNumber 5 --minSpecial 5"
