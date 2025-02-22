@@ -82,3 +82,5 @@ videos/
 
 .backups
 .config/alacritty/alacritty-theme
+.bashrc
+.config/i3status/power-profile
