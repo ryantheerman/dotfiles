@@ -11,10 +11,12 @@ alias kb="kb_layout.sh"
 alias daybook="vim ~/notes/daybook"
 
 
-# file system
-alias mv="mv -v"
-alias cp="cp -v"
-
+# file system ctl verbose flags
+#alias mv="mv -v"
+#alias cp="cp -v"
+#alias mkdir="mkdir -v"
+#alias rmdir="rmdir -v"
+#alias rm="rm -v"
 
 
 ### TMUX INSTANCES ###
