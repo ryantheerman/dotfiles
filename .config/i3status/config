@@ -15,6 +15,7 @@ order += "battery all"
 #order += "disk /"
 #order += "load"
 order += "cpu_temperature 0"
+order += "read_file power"
 order += "memory"
 order += "tztime local"
 order += "read_file uptime"
@@ -70,5 +71,10 @@ read_file uptime {
 
 cpu_temperature 0 {
         format = "CPU %degrees°C"
-        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon8/temp1_input"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon*/temp1_input"
+}
+
+read_file power {
+        format = "%content"
+        path = "/home/match/.config/i3status/power-profile"
 }
