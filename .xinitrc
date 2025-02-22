@@ -11,6 +11,7 @@ xrdb $HOME/.Xresources
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_github
 ssh-add ~/.ssh/id_aur
+libinput-gestures-setup start
 
 if [[ $(xrandr --query | grep "DP-2-6-8 connected") ]]; then
     xrandr --newmode "2560x1440_30.00" 146.25 2560 2680 2944 3328 1440 1443 1448 1468 -hsync +vsync
