@@ -41,3 +41,13 @@ set showmatch
 hi Search cterm=NONE ctermfg=black ctermbg=darkgreen
 hi SpellBad cterm=NONE ctermfg=yellow ctermbg=darkred
 hi MatchParen cterm=BOLD ctermfg=black ctermbg=darkgreen
+hi question ctermbg=darkgreen ctermfg=black
+syntax match question /.*??.*/
+hi note ctermbg=darkblue ctermfg=black
+syntax match note /.*@@.*/
+hi reference ctermbg=yellow ctermfg=black
+syntax match reference /.*''.*/
+hi warning ctermbg=darkred ctermfg=black
+syntax match warning /.*!!.*/
+hi leadingWhitespaces ctermbg=black
+syntax match leadingWhitespaces /^\s\s*/
