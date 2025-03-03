@@ -84,3 +84,4 @@ videos/
 .config/alacritty/alacritty-theme
 .bashrc
 .config/i3status/power-profile
+.emacs.d
