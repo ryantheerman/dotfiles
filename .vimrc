@@ -41,8 +41,12 @@ set showmatch
 hi Search cterm=NONE ctermfg=black ctermbg=darkgreen
 hi SpellBad cterm=NONE ctermfg=yellow ctermbg=darkred
 hi MatchParen cterm=BOLD ctermfg=black ctermbg=darkgreen
+
 hi question ctermbg=darkgreen ctermfg=black
 syntax match question /.*??.*/
+"au BufNewFile, BufRead *.txt match question /.*??.*/
+" this works for new files, but not existing -> au BufNewFile * match question /.*??.*/
+"au filetype .* match question /.*??.*/
 hi note ctermbg=darkblue ctermfg=black
 syntax match note /.*@@.*/
 hi reference ctermbg=yellow ctermfg=black
