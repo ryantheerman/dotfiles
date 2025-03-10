@@ -85,3 +85,4 @@ videos/
 .bashrc
 .config/i3status/power-profile
 .emacs.d
+.codeium
