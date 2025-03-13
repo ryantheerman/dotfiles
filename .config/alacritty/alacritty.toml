@@ -27,30 +27,31 @@ hide_when_typing      = true
 live_config_reload = true
 
 # import theme from themes repo
-#import = [
+import = [
 #   "~/.config/alacritty/alacritty-theme/themes/smoooooth.toml"
-#
+#   "~/.config/alacritty/alacritty-theme/themes/xterm.toml"
+]
 
 # Color theme ported from iTerm 2 Smoooooth
 [colors.primary]
-foreground = '#dbdbdb'
-background = '#14191e'
+foreground = '#ffffff'
+background = '#000000'
 
 [colors.cursor]
 text = '#000000'
-cursor = '#fefffe'
+cursor = '#ffffff'
 
 [colors.selection]
 text = '#000000'
 background = '#b3d7ff'
 
 [colors.normal]
-black   = '#14191e'
+black   = '#000000'
 red     = '#b43c29'
 green   = '#00c200'
 yellow  = '#c7c400'
 blue    = '#325CC0'
-#blue    = '#c7c400'
+#blue    = '#c6c400'
 magenta = '#bf3fbd'
 cyan    = '#00c5c7'
 white   = '#c7c7c7'
