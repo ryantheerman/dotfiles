@@ -62,7 +62,7 @@ exec --no-startup-id dex --autostart --environment i3
 #bindcode $mod+33 exec i3lock -c 000000
 #bindcode $mod+33 exec i3lock -i ~/pictures/backgrounds/puget_sound.png
 #bindcode $mod+Shift+33 exec ~/scripts/lockscreen.sh
-bindcode $mod+Shift+33 exec xscreensaver-command -lock
+bindcode $mod+Shift+33 exec xscreensaver-command -lock && systemctl sleep
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
