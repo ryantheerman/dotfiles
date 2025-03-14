@@ -4,11 +4,11 @@
 export EDITOR=/usr/bin/vim
 
 # scripts
-export PATH=$PATH:/home/match/scripts
-export PATH=$PATH:/home/match/scripts/cron
+export PATH=$PATH:/$HOME/scripts
+export PATH=$PATH:/$HOME/scripts/cron
 
 # bc defaults
-export BC_ENV_ARGS=/home/match/.bc
+export BC_ENV_ARGS=/$HOME/.bc
 
 # terminal color
 export GREP_COLOR='01:31'

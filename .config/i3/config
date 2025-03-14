@@ -62,7 +62,8 @@ exec --no-startup-id dex --autostart --environment i3
 #bindcode $mod+33 exec i3lock -c 000000
 #bindcode $mod+33 exec i3lock -i ~/pictures/backgrounds/puget_sound.png
 #bindcode $mod+Shift+33 exec ~/scripts/lockscreen.sh
-bindcode $mod+Shift+33 exec xscreensaver-command -lock && systemctl sleep
+bindcode $mod+Shift+33 exec xscreensaver-command -lock
+ # && systemctl sleep
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -75,8 +76,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use brightnessctl to adjust screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && $refresh_i3status
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && $refresh_i3status
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +6.25% && $refresh_i3status
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 6.25%- && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
