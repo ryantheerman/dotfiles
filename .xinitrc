@@ -5,7 +5,6 @@ xmodmap $HOME/.Xmodmap
 xcape -e 'Hyper_R=Escape'
 xcape -e 'Control_L=Control_L|a'
 # xcape -e 'Shift_L=Shift_L|Hyper_R|2'
-xinput set-button-map 11 1 1 3 4 5 6 7
 unclutter --timeout 5 --jitter 100 --ignore-scrolling &
 xrdb $HOME/.Xresources
 $HOME/scripts/cron/uptime.sh
@@ -24,7 +23,14 @@ xrandr --output eDP-1 --mode 1920x1200
 numlockx &
 redshift &
 picom &
-xscreensaver --no-splash &
-xss-lock -- xscreensaver-command -lock &
+
+# moon specific configs
+if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
+    xinput set-button-map 11 1 1 3 4 5 6 7
+    xscreensaver --no-splash &
+    xss-lock -- xscreensaver-command -lock &
+elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
+    xinput set-button-map 10 1 1 3 4 5 6 7
+fi
 
 exec i3
