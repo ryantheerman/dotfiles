@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.09 for match on Mon Mar 10 12:12:12 2025.
+# Written by xscreensaver-settings 6.09 for match on Thu Mar 13 22:17:28 2025.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:05:00
@@ -37,7 +37,7 @@ textFile:
 textProgram:	fortune
 textURL:	https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
 dialogTheme:	borderlessblack
-settingsGeom:	0,33 781,429
+settingsGeom:	2947,2193 3567,2586
 
 programs:								      \
 -				maze --root				    \n\
@@ -55,7 +55,8 @@ programs:								      \
 -				rorschach --root			    \n\
 -				decayscreen --root			    \n\
 -				flame --root				    \n\
-				halo --root				    \n\
+				halo --root --delay 59016 --count 13	      \
+				  --mode seuss				    \n\
 -				slidescreen --root			    \n\
 -				pedal --root				    \n\
 -				bouboule --root				    \n\
@@ -100,7 +101,9 @@ programs:								      \
 -				epicycle --root				    \n\
 -				flow --root				    \n\
 - GL: 				glplanet --root				    \n\
-				interference --root			    \n\
+				interference --root --count 20 --gridsize     \
+				  1 --ncolors 255 --color-shift 11 --hue      \
+				  204					    \n\
 -				kumppa --root				    \n\
 - GL: 				lament --root				    \n\
 				moire2 --root				    \n\
@@ -156,7 +159,7 @@ programs:								      \
 - GL: 				endgame --root				    \n\
 -				euler2d --root				    \n\
 -				fluidballs --root			    \n\
-  GL: 				flurry --root --preset fire		    \n\
+  GL: 				flurry --root --preset classic		    \n\
   GL: 				glblur --root				    \n\
 - GL: 				glsnake --root				    \n\
 -				halftone --root				    \n\
@@ -261,7 +264,7 @@ programs:								      \
   GL: 				discoball --root			    \n\
 - GL: 				dymaxionmap --root			    \n\
   GL: 				energystream --root			    \n\
-  GL: 				hexstrut --root				    \n\
+  GL: 				hexstrut --root --speed 0.41		    \n\
 - GL: 				hydrostat --root			    \n\
 - GL: 				raverhoop --root			    \n\
 - GL: 				splodesic --root			    \n\
