@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-settings 6.09 for match on Thu Mar 13 22:17:28 2025.
+# Written by xscreensaver-settings 6.09 for match on Thu Mar 27 13:49:19 2025.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:05:00
@@ -37,7 +37,7 @@ textFile:
 textProgram:	fortune
 textURL:	https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
 dialogTheme:	borderlessblack
-settingsGeom:	2947,2193 3567,2586
+settingsGeom:	0,33 781,429
 
 programs:								      \
 -				maze --root				    \n\
@@ -159,7 +159,7 @@ programs:								      \
 - GL: 				endgame --root				    \n\
 -				euler2d --root				    \n\
 -				fluidballs --root			    \n\
-  GL: 				flurry --root --preset classic		    \n\
+  GL: 			prime-run flurry --root --preset classic		    \n\
   GL: 				glblur --root				    \n\
 - GL: 				glsnake --root				    \n\
 -				halftone --root				    \n\
