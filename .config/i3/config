@@ -14,8 +14,8 @@
 set $mod Mod3
 set $refresh_i3status killall -SIGUSR1 i3status
 set $primary = eDP-1
-set $left = DP-3-6-8
-set $right = DP-3-6-1-8
+set $left = DP-1-6-8
+set $right = DP-1-6-1-8
 set $HDMI = HDMI-1
 
 # start up terminal on workspace 1

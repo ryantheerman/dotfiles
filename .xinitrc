@@ -31,6 +31,7 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
     xss-lock -- xscreensaver-command -lock &
 elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
     xinput set-button-map 10 1 1 3 4 5 6 7
+    xss-lock -- $HOME/scripts/lock.sh -lock &
 fi
 
 exec i3
