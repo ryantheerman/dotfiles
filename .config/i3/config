@@ -332,6 +332,10 @@ mode "utilities" {
         # dvorak 't' for temperature
         bindcode 45 exec pkill -USR1 '^redshift$'; mode "default"
 
+        # toggle bluetooth on and off
+        # dvorak 'b'
+        bindcode 57 exec ~/scripts/toggle_bluetooth.sh; mode "default"
+
         # toggle us standard and us dvorak keymap
         #bindsym k exec ~/scripts/kb_layout.sh; mode "default"
         # dvorak 'k' for keymap
@@ -340,7 +344,7 @@ mode "utilities" {
         # trigger display check and apply display config depending on connected outputs
         #bindsym d exec ~/scripts/startup_display.sh; mode "default"
         # dvorak 'd' for display
-        bindcode 43 exec ~/scripts/startup_display.sh; mode "default"
+        bindcode 43 exec ~/scripts/display.sh; mode "default"
 
         # screenshot tool
         #bindsym p exec flameshot gui; mode "default"
