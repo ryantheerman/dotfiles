@@ -30,6 +30,10 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
     xscreensaver --no-splash &
     xss-lock -- xscreensaver-command -lock &
 elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
+    # screen layout
+    if [[ $(xrandr --query | grep "DP-1-6-8 connected") ]]; then
+        $HOME/.screenlayout/callisto-docked.sh
+    fi
     xinput set-button-map 10 1 1 3 4 5 6 7
     xss-lock -- $HOME/scripts/lock.sh -lock &
 fi
