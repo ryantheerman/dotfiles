@@ -25,6 +25,13 @@ libinput-gestures-setup start
 # init onboard screen resolution !!
 xrandr --output eDP-1 --mode 1920x1200
 
+# init bluetooth status
+if [[ $(rfkill | grep "tpacpi_bluetooth_sw unblocked unblocked") ]]; then
+    echo "on" > /home/match/.config/i3status/bluetooth
+else
+    echo "<span color='red'>off</span>" /home/match/.config/i3status/bluetooth
+fi
+
 # background processes !!
 numlockx &
 redshift &
