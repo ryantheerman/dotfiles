@@ -14,8 +14,10 @@
 set $mod Mod3
 set $refresh_i3status killall -SIGUSR1 i3status
 set $primary = eDP-1
-set $left = DP-1-6-8
-set $right = DP-1-6-1-8
+set $left_callisto = DP-1-6-8
+set $right_callisto = DP-1-6-1-8
+set $left_ganymede = DP-3-6-8
+set $right_ganymede = DP-3-6-1-8
 set $HDMI = HDMI-1
 
 # start up terminal on workspace 1
@@ -206,17 +208,17 @@ set $ws10 "10"
 # preferred output is listed first, followed by the backup (in case expected outputs are not connected)
 workspace $ws1 output  $primary
 
-workspace $ws2 output  $left     $primary
-workspace $ws4 output  $left     $primary
-workspace $ws6 output  $left     $primary
-workspace $ws8 output  $left     $primary
-workspace $ws10 output $left     $primary
+workspace $ws2 output  $left_callisto     $left_ganymede     $primary
+workspace $ws4 output  $left_callisto     $left_ganymede     $primary
+workspace $ws6 output  $left_callisto     $left_ganymede     $primary
+workspace $ws8 output  $left_callisto     $left_ganymede     $primary
+workspace $ws10 output $left_callisto     $left_ganymede     $primary
 #workspace $ws10 output $HDMI     $primary
 
-workspace $ws3 output  $right    $primary
-workspace $ws5 output  $right    $primary
-workspace $ws7 output  $right    $primary
-workspace $ws9 output  $right    $primary
+workspace $ws3 output  $right_callisto     $right_ganymede    $primary
+workspace $ws5 output  $right_callisto     $right_ganymede    $primary
+workspace $ws7 output  $right_callisto     $right_ganymede    $primary
+workspace $ws9 output  $right_callisto     $right_ganymede    $primary
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
