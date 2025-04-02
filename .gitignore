@@ -97,3 +97,4 @@ Desktop
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .nvidia-settings-rc
+.config/i3status/bluetooth
