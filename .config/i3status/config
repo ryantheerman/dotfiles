@@ -1,6 +1,7 @@
 general {
         colors = true
         interval = 1
+        markup = "pango"
 
         color_good = "#39ff14"
         color_degraded = "#ffff00"
@@ -11,6 +12,7 @@ general {
 order += "wireless _first_"
 #order += "ethernet _first_"
 order += "volume master"
+order += "read_file bluetooth"
 order += "battery all"
 #order += "disk /"
 #order += "load"
@@ -77,4 +79,9 @@ cpu_temperature 0 {
 read_file power {
         format = "%content"
         path = "/home/match/.config/i3status/power-profile"
+}
+
+read_file bluetooth {
+        format = "<span color='white'>bluetooth:</span> %content"
+        path = "/home/match/.config/i3status/bluetooth"
 }
