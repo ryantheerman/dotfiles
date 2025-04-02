@@ -47,7 +47,6 @@
 .npm/
 .pki/
 .psql_history
-.screenlayout/
 .sonarlint/
 .ssh/
 .swt/
