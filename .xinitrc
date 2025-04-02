@@ -22,9 +22,6 @@ ssh-add ~/.ssh/id_aur
 # allow for 3 finger swipe !!
 libinput-gestures-setup start
 
-# init onboard screen resolution !!
-xrandr --output eDP-1 --mode 1920x1200
-
 # init bluetooth status
 if [[ $(rfkill | grep "tpacpi_bluetooth_sw unblocked unblocked") ]]; then
     echo "on" > /home/match/.config/i3status/bluetooth
@@ -39,12 +36,6 @@ picom &
 
 # moon specific configs !!
 if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
-
-    # screen layout ''
-    if [[ $(xrandr --query | grep "DP-3-6-8 connected") ]]; then
-        $HOME/.screenlayout/ganymede-docked.sh
-    fi
-
     # swap middle click for left click ''
     xinput set-button-map 11 1 1 3 4 5 6 7
     xinput set-button-map 15 1 1 3 4 5 6 7
@@ -52,17 +43,7 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
     # set screensaver and lock ''
     xscreensaver --no-splash &
     xss-lock -- xscreensaver-command -lock &
-
-    # add conditional here to check if nvidia card is active ''
-    xrandr --setprovideroutputsource modesetting NVIDIA-0
-    xrandr --auto
 elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
-
-    # screen layout ''
-    if [[ $(xrandr --query | grep "DP-1-6-8 connected") ]]; then
-        $HOME/.screenlayout/callisto-docked.sh
-    fi
-
     # swap middle click for left click ''
     xinput set-button-map 10 1 1 3 4 5 6 7
 
@@ -70,4 +51,5 @@ elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
     xss-lock -- $HOME/scripts/lock.sh -lock &
 fi
 
+/home/match/scripts/display.sh
 exec i3
