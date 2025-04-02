@@ -27,7 +27,7 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
     xinput set-button-map 15 1 1 3 4 5 6 7
     xscreensaver --no-splash &
     xss-lock -- xscreensaver-command -lock &
-# add conditional here to check if nvidia card is active
+    # add conditional here to check if nvidia card is active
     xrandr --setprovideroutputsource modesetting NVIDIA-0
     xrandr --auto
 elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
