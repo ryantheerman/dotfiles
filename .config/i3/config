@@ -437,10 +437,4 @@ bar {
 }
 
 ### STARTUP SCRIPTS ###
-# set headphone and speaker volume to 100%
-#exec_always --no-startup-id ~/scripts/startup_volume.sh
-#exec --no-startup-id ~/scripts/main-tmux.sh
-
-# create modelines, add to outputs, and draw outputs with given modes
-# moved this logic to .xinitrc
-#exec_always --no-startup-id ~/scripts/startup_display.sh
+#exec --no-startup-id ~/scripts/display.sh
