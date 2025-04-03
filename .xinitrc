@@ -51,5 +51,6 @@ elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
     xss-lock -- $HOME/scripts/lock.sh -lock &
 fi
 
-/home/match/scripts/display.sh
+xrandr --output eDP-1 --mode 1920x1200
+#/home/match/scripts/display.sh
 exec i3
