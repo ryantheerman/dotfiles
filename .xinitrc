@@ -36,6 +36,14 @@ picom &
 
 # moon specific configs
 if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
+    # xrandr config
+    if [[ $(glxinfo | grep "renderer string: Mesa Intel(R)") ]]; then
+        xrandr --output eDP-1 --mode 1920x1200
+    else
+        xrandr --setprovideroutputsource modesetting NVIDIA-0
+        xrandr --output eDP-1-1 --mode 1920x1200
+    fi
+
     # swap middle click for left click
     xinput set-button-map 11 1 1 3 4 5 6 7
     xinput set-button-map 15 1 1 3 4 5 6 7
@@ -44,6 +52,9 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
     xscreensaver --no-splash &
     xss-lock -- xscreensaver-command -lock &
 elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
+    # xrandr config
+    xrandr --output eDP-1 --mode 1920x1200
+
     # swap middle click for left click
     xinput set-button-map 10 1 1 3 4 5 6 7
 
@@ -51,6 +62,5 @@ elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
     xss-lock -- $HOME/scripts/lock.sh -lock &
 fi
 
-xrandr --output eDP-1 --mode 1920x1200
 #/home/match/scripts/display.sh
 exec i3
