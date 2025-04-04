@@ -340,6 +340,10 @@ mode "utilities" {
         # dvorak 'b'
         bindcode 57 exec ~/scripts/toggle_bluetooth.sh; mode "default"
 
+        # toggle active gpu (requires reboot)
+        # dvorak 'g'
+#        bindcode 30 exec ~/scripts/toggle-gpu.sh; mode "default"
+
         # toggle us standard and us dvorak keymap
         #bindsym k exec ~/scripts/kb_layout.sh; mode "default"
         # dvorak 'k' for keymap
