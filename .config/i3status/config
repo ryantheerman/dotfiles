@@ -16,8 +16,9 @@ order += "read_file bluetooth"
 order += "battery all"
 #order += "disk /"
 #order += "load"
-order += "cpu_temperature 0"
 order += "read_file power"
+order += "read_file gpu"
+order += "cpu_temperature 0"
 order += "memory"
 order += "tztime local"
 order += "read_file uptime"
@@ -84,4 +85,9 @@ read_file power {
 read_file bluetooth {
         format = "<span color='white'>bluetooth:</span> %content"
         path = "/home/match/.config/i3status/bluetooth"
+}
+
+read_file gpu {
+        format = "<span color='white'>gpu:</span> %content"
+        path = "/home/match/.config/i3status/gpu"
 }

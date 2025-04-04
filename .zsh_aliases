@@ -45,3 +45,9 @@ alias git-dotfiles="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.dotfiles -
 alias git-scripts="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.scripts --work-tree=$HOME/scripts"
 alias git-notes="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.notes --work-tree=$HOME/notes"
 alias git-pacman="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.pacman --work-tree=/etc/pacman.d/hooks"
+
+# set active gpu to integrated gpu
+alias gpui='sudo envycontrol -s integrated'
+
+# set active gpu to discrete gpu
+alias gpud='sudo envycontrol -s nvidia'

@@ -44,6 +44,9 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
         xrandr --output eDP-1-1 --mode 1920x1200
     fi
 
+    # populate i3status bar module with active gpu
+    $HOME/scripts/gpu-check.sh
+
     # swap middle click for left click
     xinput set-button-map 11 1 1 3 4 5 6 7
     xinput set-button-map 15 1 1 3 4 5 6 7
@@ -62,5 +65,4 @@ elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
     xss-lock -- $HOME/scripts/lock.sh -lock &
 fi
 
-#/home/match/scripts/display.sh
 exec i3

@@ -21,3 +21,12 @@ dien() {dict -d gcide $1 | less}
 dit() {dict -d moby-thesaurus $1 | less}
 
 dic() {dict -d foldoc $1 | less}
+#!/bin/bash
+
+gpu() {
+    if glxinfo | grep "Mesa Intel(R)" > /dev/null; then
+        sudo envycontrol -s nvidia
+    else
+        sudo envycontrol -s integrated
+    fi
+}
