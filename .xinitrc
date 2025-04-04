@@ -11,6 +11,9 @@ xrdb $HOME/.Xresources
 # init uptime
 $HOME/scripts/cron/uptime.sh
 
+# populate i3status bar module with active gpu
+$HOME/scripts/gpu-check.sh
+
 # hide mouse cursor after 5 seconds inactivity
 unclutter --timeout 5 --jitter 100 --ignore-scrolling &
 
@@ -43,9 +46,6 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
         xrandr --setprovideroutputsource modesetting NVIDIA-0
         xrandr --output eDP-1-1 --mode 1920x1200
     fi
-
-    # populate i3status bar module with active gpu
-    $HOME/scripts/gpu-check.sh
 
     # swap middle click for left click
     xinput set-button-map 11 1 1 3 4 5 6 7
