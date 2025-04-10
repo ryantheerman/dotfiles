@@ -99,3 +99,4 @@ Desktop
 .nvidia-settings-rc
 .config/i3status/bluetooth
 .config/i3status/gpu
+vms/
