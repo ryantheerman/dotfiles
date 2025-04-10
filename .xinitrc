@@ -18,9 +18,11 @@ $HOME/scripts/gpu-check.sh
 unclutter --timeout 5 --jitter 100 --ignore-scrolling &
 
 # set up ssh keys
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_github
-ssh-add ~/.ssh/id_aur
+if ! pgrep -x "ssh-agent" > /dev/null; then
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_github
+    ssh-add ~/.ssh/id_aur
+fi
 
 # allow for 3 finger swipe
 libinput-gestures-setup start
@@ -64,5 +66,10 @@ elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
     # set lock
     xss-lock -- $HOME/scripts/lock.sh -lock &
 fi
+
+# dark mode
+export GTK_THEME=Adwaita:dark
+export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_STYLE_OVERRIDE=Fusion
 
 exec i3
