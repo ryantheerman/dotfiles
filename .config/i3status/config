@@ -13,15 +13,15 @@ order += "wireless _first_"
 #order += "ethernet _first_"
 order += "volume master"
 order += "read_file bluetooth"
+order += "read_file power"
 order += "battery all"
 #order += "disk /"
 #order += "load"
-order += "read_file power"
 order += "read_file gpu"
 order += "cpu_temperature 0"
 order += "memory"
 order += "tztime local"
-order += "read_file uptime"
+#order += "read_file uptime"
 
 wireless _first_ {
         format_up = "%quality %essid"
@@ -57,7 +57,7 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "%Y-%m-%d %H:%M:%S "
 }
 
 volume master {
