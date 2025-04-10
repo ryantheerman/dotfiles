@@ -51,3 +51,6 @@ alias gpui='sudo envycontrol -s integrated'
 
 # set active gpu to discrete gpu
 alias gpud='sudo envycontrol -s nvidia'
+
+# sudo with environment configs
+alias sudo='sudo -E'
