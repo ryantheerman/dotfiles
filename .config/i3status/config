@@ -57,7 +57,7 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S "
+        format = "<span color='#e0218a'>%Y-%m-%d %H:%M:%S</span> "
 }
 
 volume master {

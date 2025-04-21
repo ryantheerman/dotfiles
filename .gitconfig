@@ -3,3 +3,5 @@
 	name = ryan theerman
 [init]
 	defaultBranch = main
+[fetch]
+	prune = true
