@@ -102,3 +102,5 @@ Desktop
 vms/
 .save
 .config/chromium
+.config/libreoffice/
+software/

@@ -4,8 +4,9 @@
 export EDITOR=/usr/bin/vim
 
 # scripts
-export PATH=$PATH:/$HOME/scripts
+export PATH=$PATH:/$HOME/scripts/
 export PATH=$PATH:/$HOME/scripts/cron
+export PATH=$PATH:/$HOME/scripts/i3status_init
 
 # bc defaults
 export BC_ENV_ARGS=/$HOME/.bc

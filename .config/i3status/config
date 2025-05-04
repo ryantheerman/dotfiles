@@ -17,7 +17,6 @@ order += "read_file power"
 order += "battery all"
 #order += "disk /"
 #order += "load"
-order += "read_file gpu"
 order += "cpu_temperature 0"
 order += "memory"
 order += "tztime local"
@@ -56,8 +55,12 @@ memory {
         format_degraded = "MEMORY < %available"
 }
 
+#tztime local {
+#        format = "<span color='#e0218a'>%Y-%m-%d %H:%M:%S</span> "
+#}
+
 tztime local {
-        format = "<span color='#e0218a'>%Y-%m-%d %H:%M:%S</span> "
+        format = "%Y-%m-%d %H:%M:%S "
 }
 
 volume master {
@@ -85,9 +88,4 @@ read_file power {
 read_file bluetooth {
         format = "<span color='white'>bluetooth:</span> %content"
         path = "/home/match/.config/i3status/bluetooth"
-}
-
-read_file gpu {
-        format = "<span color='white'>gpu:</span> %content"
-        path = "/home/match/.config/i3status/gpu"
 }

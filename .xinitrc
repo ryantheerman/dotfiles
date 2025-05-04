@@ -34,6 +34,9 @@ else
     echo "<span color='red'>off</span>" /home/match/.config/i3status/bluetooth
 fi
 
+# init i3status config
+~/scripts/i3status_init/i3status_init.sh
+
 # background processes
 numlockx &
 redshift &
