@@ -104,3 +104,4 @@ vms/
 .config/chromium
 .config/libreoffice/
 software/
+.config/i3status/keymap

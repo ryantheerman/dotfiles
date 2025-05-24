@@ -8,6 +8,13 @@ xcape -e 'Control_L=Control_L|a'
 # xcape -e 'Shift_L=Shift_L|Hyper_R|2'
 xrdb $HOME/.Xresources
 
+# init keymap i3status
+if setxkbmap -query | grep -iq variant; then
+    echo "<span color='pink'>dvorak</span>" > ~/.config/i3status/keymap
+else
+    echo "<span color='yellow'>qwerty</span>" > ~/.config/i3status/keymap
+fi
+
 # init uptime
 $HOME/scripts/cron/uptime.sh
 
