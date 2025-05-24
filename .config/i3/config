@@ -266,10 +266,10 @@ bindcode $mod+Shift+40 exec "i3-nagbar -t warning -m 'You pressed the exit short
 
 # client assignments
 assign [class="zen-browser"] $ws2
-assign [class="vlc"] $ws4
-for_window [class="Spotify"] move to workspace $ws10
-assign [class="jetbrains-idea-ce"] $ws3
-assign [class="VSCodium"] $ws5
+#assign [class="vlc"] $ws4
+#for_window [class="Spotify"] move to workspace $ws10
+#assign [class="jetbrains-idea-ce"] $ws3
+#assign [class="VSCodium"] $ws5
 
 # border settings
 # remove border from alacritty
