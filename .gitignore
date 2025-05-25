@@ -105,3 +105,4 @@ vms/
 .config/libreoffice/
 software/
 .config/i3status/keymap
+.config/i3status/config
