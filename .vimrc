@@ -15,6 +15,8 @@ set showmode
 set history=1000
 set number
 set linebreak
+set mouse=a
+set paste
 
 "KEY MAPPINGS"
 nmap l cl

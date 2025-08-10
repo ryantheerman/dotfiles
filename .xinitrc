@@ -16,20 +16,20 @@ else
 fi
 
 # init uptime
-$HOME/scripts/cron/uptime.sh
+#$HOME/scripts/cron/uptime.sh
 
 # populate i3status bar module with active gpu
-$HOME/scripts/gpu-check.sh
+#$HOME/scripts/gpu-check.sh
 
 # hide mouse cursor after 5 seconds inactivity
-unclutter --timeout 5 --jitter 100 --ignore-scrolling &
+unclutter --timeout 15 --jitter 100 --ignore-scrolling &
 
 # set up ssh keys
-if ! pgrep -x "ssh-agent" > /dev/null; then
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_github
-    ssh-add ~/.ssh/id_aur
-fi
+#if ! pgrep -x "ssh-agent" > /dev/null; then
+#    eval "$(ssh-agent -s)"
+#    ssh-add ~/.ssh/id_github
+#    ssh-add ~/.ssh/id_aur
+#fi
 
 # allow for 3 finger swipe
 libinput-gestures-setup start
@@ -42,7 +42,7 @@ else
 fi
 
 # init i3status config
-~/scripts/i3status_init/i3status_init.sh
+#~/scripts/i3status_init/i3status_init.sh
 
 # background processes
 numlockx &
@@ -61,7 +61,7 @@ if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
 
     # swap middle click for left click
     xinput set-button-map 11 1 1 3 4 5 6 7
-    xinput set-button-map 15 1 1 3 4 5 6 7
+    xinput set-button-map 14 1 1 3 4 5 6 7
 
     # set screensaver and lock
     xscreensaver --no-splash &
@@ -72,6 +72,7 @@ elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
 
     # swap middle click for left click
     xinput set-button-map 10 1 1 3 4 5 6 7
+    xinput set-button-map 14 1 1 3 4 5 6 7
 
     # set lock
     xss-lock -- $HOME/scripts/lock.sh -lock &

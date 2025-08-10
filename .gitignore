@@ -106,3 +106,11 @@ vms/
 software/
 .config/i3status/keymap
 .config/i3status/config
+vaultwarden.crt
+non-aur
+.config/obs-studio/logs
+.config/Moonlight Game Streaming Project/
+.config/.MakeMKV/_private_data.tar
+.rustup
+.config/obs-studio
+.MakeMKV/

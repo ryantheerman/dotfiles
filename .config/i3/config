@@ -32,7 +32,8 @@ exec --no-startup-id i3-msg "workspace 1; exec --no-startup-id alacritty"
 #mountain pass
 #exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/mountain_pass.jpg
 #puget sound
-exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/puget_sound.jpg
+#exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/puget_sound.jpg
+exec_always --no-startup-id feh --bg-fil /home/match/pictures/lock/lockscreen.png
 #toteninsel
 #exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/toteninsel.jpg
 
@@ -80,6 +81,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use brightnessctl to adjust screen brightness
+#bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +6.25% && $refresh_i3status
+#bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 6.25%- && $refresh_i3status
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +6.25% && $refresh_i3status
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 6.25%- && $refresh_i3status
 
@@ -340,6 +343,10 @@ mode "utilities" {
         # dvorak 'b'
         bindcode 57 exec ~/scripts/toggle_bluetooth.sh; mode "default"
 
+		# restart audio stack
+		# dvorak 'a'
+		bindcode 38 exec ~/scripts/restart-audio.sh; mode "default"
+
         # toggle active gpu (requires reboot)
         # dvorak 'g'
 #        bindcode 30 exec ~/scripts/toggle-gpu.sh; mode "default"
@@ -363,6 +370,12 @@ mode "utilities" {
         bindsym 1 exec ~/scripts/power-profile.sh power-saving; mode "default"
         bindsym 2 exec ~/scripts/power-profile.sh balanced; mode "default"
         bindsym 3 exec ~/scripts/power-profile.sh performance; mode "default"
+
+		# screen brightness toggle
+		bindsym 4 exec ~/scripts/toggle-brightness.sh; mode "default"
+
+		# copy url from zen browser and open in firefox
+		bindcode 41 exec ~/scripts/zen-to-firefox-move-tab.sh; mode "default"
 
         # back to normal: Enter or Escape or $mod+c
         bindsym Return mode "default"

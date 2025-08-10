@@ -34,3 +34,5 @@ PROMPT='%F{green}%n@%m %F{blue}%~%b%f %F{red}%B${vcs_info_msg_0_}%b%f> '
 
 # Use colors for less, man, etc.
 #[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
+
+source /home/match/projects/misc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

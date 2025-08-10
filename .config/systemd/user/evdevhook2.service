@@ -1,0 +1,9 @@
+[Unit]
+Description=starts a server to pass game controller gyro data to listening clients
+
+[Service]
+ExecStart=/usr/bin/evdevhook2
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
