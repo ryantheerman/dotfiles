@@ -15,7 +15,7 @@ set showmode
 set history=1000
 set number
 set linebreak
-set mouse=a
+"set mouse=a
 set paste
 
 "KEY MAPPINGS"
@@ -68,3 +68,8 @@ hi reference ctermfg=yellow
 syntax match reference /.*''.*/
 hi warning ctermfg=darkred
 syntax match warning /.*!!.*/
+
+" cursorline highlighting
+set cursorline
+hi CursorLine cterm=NONE ctermbg=22
+hi CursorLineNr term=bold cterm=NONE ctermfg=22
