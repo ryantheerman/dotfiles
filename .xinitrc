@@ -21,9 +21,6 @@ fi
 # populate i3status bar module with active gpu
 #$HOME/scripts/gpu-check.sh
 
-# hide mouse cursor after 5 seconds inactivity
-unclutter --timeout 15 --jitter 100 --ignore-scrolling &
-
 # set up ssh keys
 #if ! pgrep -x "ssh-agent" > /dev/null; then
 #    eval "$(ssh-agent -s)"
@@ -48,35 +45,18 @@ fi
 numlockx &
 redshift &
 picom &
+# hide mouse cursor after 10 seconds inactivity
+unclutter --timeout 10 --jitter 100 --ignore-scrolling &
 
-# moon specific configs
-if [[ $($HOME/scripts/readMoon.sh) == "ganymede" ]]; then
-    # xrandr config
-    if [[ $(glxinfo | grep "renderer string: Mesa Intel(R)") ]]; then
-        xrandr --output eDP-1 --mode 1920x1200
-    else
-        xrandr --setprovideroutputsource modesetting NVIDIA-0
-        xrandr --output eDP-1-1 --mode 1920x1200
-    fi
+# xrandr config
+xrandr --output eDP-1 --mode 1920x1200
 
-    # swap middle click for left click
-    xinput set-button-map 11 1 1 3 4 5 6 7
-    xinput set-button-map 14 1 1 3 4 5 6 7
+# swap middle click for left click
+xinput set-button-map 10 1 1 3 4 5 6 7
+xinput set-button-map 14 1 1 3 4 5 6 7
 
-    # set screensaver and lock
-    xscreensaver --no-splash &
-    xss-lock -- xscreensaver-command -lock &
-elif [[ $($HOME/scripts/readMoon.sh) == "callisto" ]]; then
-    # xrandr config
-    xrandr --output eDP-1 --mode 1920x1200
-
-    # swap middle click for left click
-    xinput set-button-map 10 1 1 3 4 5 6 7
-    xinput set-button-map 14 1 1 3 4 5 6 7
-
-    # set lock
-    xss-lock -- $HOME/scripts/lock.sh -lock &
-fi
+# set lock
+xss-lock -- $HOME/scripts/lock.sh -lock &
 
 # dark mode
 export GTK_THEME=Adwaita:dark
