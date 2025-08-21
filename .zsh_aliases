@@ -10,6 +10,8 @@ alias kb="kb_layout.sh"
 # open daybook in vim
 alias daybook="vim ~/notes/daybook"
 
+# check battery level
+alias batt="batt.sh"
 
 # file system ctl verbose flags
 #alias mv="mv -v"
