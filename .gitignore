@@ -114,3 +114,6 @@ non-aur
 .rustup
 .config/obs-studio
 .MakeMKV/
+.cursor/
+.w3m/
+.config/Cursor/
