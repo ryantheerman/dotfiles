@@ -29,5 +29,5 @@ export PGUSER="datalord"
 #export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
 #export GROFF_NO_SGR=1
 
-export MANPAGER="less -R --use-color -Dd+r -Du+g"
+export MANPAGER="less -R --use-color -Dd+b -Du+y"
 export MANROFFOPT="-P -c"
