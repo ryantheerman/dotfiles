@@ -72,7 +72,7 @@ bindcode $mod+Shift+33 exec $HOME/scripts/lock.sh
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && $refresh_i3status
@@ -83,8 +83,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use brightnessctl to adjust screen brightness
 #bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +6.25% && $refresh_i3status
 #bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 6.25%- && $refresh_i3status
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +6.25% && $refresh_i3status
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 6.25%- && $refresh_i3status
+
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/brightness.sh up
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/brightness.sh down
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -277,7 +278,31 @@ assign [class="zen-browser"] $ws2
 # border settings
 # remove border from alacritty
 #for_window [class="Alacritty"] border none
-for_window [class="^.*"] border none
+# remove border from ALL windows
+#for_window [class="^.*"] border none
+
+# remove titlebar and leave border
+default_border pixel 1
+default_floating_border pixel 1
+hide_edge_borders smart
+
+
+
+set $transp       #00000000
+# class                 border  backgr. text    indicator child_border
+client.focused          #ff0000 $ff0000 #ff0000 #ff0000  #ff0000
+client.focused_inactive #333333 #5f676a #ffffff #484e50   $transp
+client.unfocused        #333333 #222222 #888888 #292d2e   $transp
+client.urgent           #2f343a #900000 #ffffff #900000   $transp
+client.placeholder      #000000 #0c0c0c #ffffff #000000   $transp
+
+client.background       #ffffff
+
+
+
+
+
+
 
 
 ### SPECIAL MODES ###
@@ -360,6 +385,12 @@ mode "utilities" {
         #bindsym d exec ~/scripts/startup_display.sh; mode "default"
         # dvorak 'd' for display
         bindcode 43 exec ~/scripts/display.sh; mode "default"
+
+		# experimental brightness control
+		# dvorak ','
+		bindcode 25 exec $HOME/scripts/brightness.sh down && $refresh_i3status
+		# dvorak '.'
+		bindcode 26 exec $HOME/scripts/brightness.sh up && $refresh_i3status
 
         # screenshot tool
         #bindsym p exec flameshot gui; mode "default"
