@@ -117,3 +117,10 @@ non-aur
 .cursor/
 .w3m/
 .config/Cursor/
+.config/bluetuith/
+.config/go
+.config/racket/
+.config/spotify-player/
+.librewolf
+.config/i3status/brightness
+go/
