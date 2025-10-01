@@ -7,6 +7,7 @@ export EDITOR=/usr/bin/vim
 export PATH=$PATH:/$HOME/scripts/
 export PATH=$PATH:/$HOME/scripts/cron
 export PATH=$PATH:/$HOME/scripts/i3status_init
+export PATH=$PATH:/usr/bin/ncspot
 
 # bc defaults
 export BC_ENV_ARGS=/$HOME/.bc

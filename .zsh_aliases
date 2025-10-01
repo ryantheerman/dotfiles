@@ -62,3 +62,6 @@ alias sudo='sudo -E'
 
 # spotify tui
 alias spotify='ncspot'
+
+# open sicp racket file
+alias sicp='~/scripts/sicp-tmux.sh'
