@@ -1,7 +1,7 @@
 # x configs
 setxkbmap us -v dvorak
 xset r rate 200 30
-xset s 1800 1800 +dpms
+xset s 600 600 +dpms
 xmodmap $HOME/.Xmodmap
 xcape -e 'Hyper_R=Escape'
 xcape -e 'Control_L=Control_L|a'
@@ -33,9 +33,9 @@ libinput-gestures-setup start
 
 # init bluetooth status
 if [[ $(rfkill | grep "tpacpi_bluetooth_sw unblocked unblocked") || $(rfkill | grep "hci0           unblocked unblocked") ]]; then
-    echo "on" > /home/match/.config/i3status/bluetooth
+    echo "bluetooth" > /home/match/.config/i3status/bluetooth
 else
-    echo "<span color='red'>off</span>" /home/match/.config/i3status/bluetooth
+    echo "<span color='red'>bluetooth</span>" /home/match/.config/i3status/bluetooth
 fi
 
 # init i3status config
@@ -44,9 +44,9 @@ fi
 # background processes
 numlockx &
 redshift &
-picom &
-# hide mouse cursor after 10 seconds inactivity
-unclutter --timeout 10 --jitter 100 --ignore-scrolling &
+#picom &
+# hide mouse cursor after 8 seconds inactivity
+unclutter --timeout 8 --jitter 100 --ignore-scrolling &
 
 # xrandr config
 xrandr --output eDP-1 --mode 1920x1200
@@ -56,7 +56,10 @@ xinput set-button-map 10 1 1 3 4 5 6 7
 xinput set-button-map 14 1 1 3 4 5 6 7
 
 # set lock
-xss-lock -- $HOME/scripts/lock.sh -lock &
+xss-lock -- $HOME/scripts/lock.sh &
+#xautolock -time 1 -locker "$HOME/scripts/lock.sh" &
+#xidlehook --not-when-fullscreen --not-when-audio --detect-sleep --timer 900 'pactl set-sink-mute @DEFAULT_SINK@ on && systemctl suspend-then-hibernate' '' &
+xidlehook --not-when-fullscreen --not-when-audio --detect-sleep --timer 900 '$HOME/scripts/suspend-then-hibernate-wrapper.sh' '' &
 
 # dark mode
 export GTK_THEME=Adwaita:dark
