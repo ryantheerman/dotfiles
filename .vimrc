@@ -20,8 +20,9 @@ set linebreak
 "set mouse=a
 "set paste
 
-"set leader key
+"leader key
 let mapleader=","
+nnoremap <leader>t :terminal<CR>
 
 "KEY MAPPINGS
 nmap l cl
