@@ -1,0 +1,17 @@
+# Enable recoloring
+set recolor true
+
+# Dark mode colors (dark background, light text)
+set recolor-darkcolor "#dcdccc"    # light text
+set recolor-lightcolor "#1f1f1f"   # dark background
+
+# Also recolor images (optional, sometimes undesirable)
+set recolor-keephue false
+
+# opens to last location
+set database sqlite
+
+# tweak scroll
+#set scroll-step 10
+
+set adjust-open "width"
