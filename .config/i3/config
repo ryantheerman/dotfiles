@@ -11,7 +11,7 @@
 
 # set some variables
 
-set $mod Mod3
+set $mod Mod4
 set $refresh_i3status killall -SIGUSR1 i3status
 set $primary = eDP-1
 set $left_callisto = DP-1-6-8
@@ -33,7 +33,7 @@ exec --no-startup-id i3-msg "workspace 1; exec --no-startup-id alacritty"
 #exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/mountain_pass.jpg
 #puget sound
 #exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/puget_sound.jpg
-exec_always --no-startup-id feh --bg-fil /home/match/pictures/lock/lockscreen.png
+exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/tilting.png
 #toteninsel
 #exec_always --no-startup-id feh --bg-fil /home/match/pictures/backgrounds/toteninsel.jpg
 
@@ -108,6 +108,8 @@ bindcode $mod+Shift+24 kill
 #bindcode $mod+43 exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 bindcode $mod+43 exec "rofi -modi drun,run -show drun"
+#bindcode $mod+43 exec --no-startup-id alacritty --class fling -e fling
+#for_window [class="fling"] floating enable, resize set 400 300, move position center
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -156,8 +158,8 @@ bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 #bindsym $mod+w split h
-# dvorak 'w'
-bindcode $mod+59 split h
+# dvorak 'z'
+bindcode $mod+61 split h
 
 # split in vertical orientation
 #bindsym $mod+v split v
@@ -282,16 +284,20 @@ assign [class="zen-browser"] $ws2
 #for_window [class="^.*"] border none
 
 # remove titlebar and leave border
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 2
+default_floating_border pixel 2
 hide_edge_borders smart
+
+# explicitly add border to all windows (some windows don't have a border for some reason. this corrects that)
+for_window [class="^.*"] border pixel 2
+
 
 
 
 set $transp       #00000000
 # class                 border  backgr. text    indicator child_border
-client.focused          #ff0000 $ff0000 #ff0000 #ff0000  #ff0000
-client.focused_inactive #333333 #5f676a #ffffff #484e50   $transp
+client.focused          #ff0000 $ff0000 #ff0000 #ff0000  #7c0a02
+client.focused_inactive #333333 #5f676a #ffffff $transp   $transp
 client.unfocused        #333333 #222222 #888888 #292d2e   $transp
 client.urgent           #2f343a #900000 #ffffff #900000   $transp
 client.placeholder      #000000 #0c0c0c #ffffff #000000   $transp
@@ -379,7 +385,7 @@ mode "utilities" {
         # toggle us standard and us dvorak keymap
         #bindsym k exec ~/scripts/kb_layout.sh; mode "default"
         # dvorak 'k' for keymap
-        bindcode 55 exec ~/scripts/kb_layout.sh; mode "default"
+        #bindcode 55 exec ~/scripts/kb_layout.sh; mode "default"
 
         # trigger display check and apply display config depending on connected outputs
         #bindsym d exec ~/scripts/startup_display.sh; mode "default"
@@ -415,7 +421,38 @@ mode "utilities" {
         # dvorak 'u'
         bindcode $mod+41 mode "default"
 
+        # kill x server
+        # dvorak 'x'
+#        bindcode $mod+56 exec 'pkill -15 Xorg'
+
 }
+
+
+# input mode
+# used for not input control
+bindcode $mod+42 mode "input"
+mode "input" {
+        # these bindings trigger as soon as you enter input mode
+
+        # dvorak 't' for touchscreen
+        bindcode 45 exec ~/scripts/toggle-touchscreen.sh; mode "default"
+
+        # toggle us standard and us dvorak keymap
+        #bindsym k exec ~/scripts/kb_layout.sh; mode "default"
+        # dvorak 'k' for keymap
+        bindcode 55 exec ~/scripts/kb_layout.sh; mode "default"
+
+        # back to normal: Enter or Escape or $mod+c
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        #bindsym $mod+u mode "default"
+        # dvorak 'u'
+        bindcode $mod+42 mode "default"
+
+}
+
+# TODO: change input mode to io, move relevant utility mode shortcuts into it
+
 
 #bindsym $mod+u mode "utility"
 # dvorak 'u'
