@@ -1,7 +1,12 @@
 
 [font]
 normal = { family = "3270 Nerd Font Mono", style = "Regular" }
-size = 12.0
+#size = 12.0
+size = 14.0
+
+[font.offset]
+x = 0
+y = 1
 
 [selection]
 save_to_clipboard     = true
@@ -66,3 +71,11 @@ blue    = '#a6aaf1'
 magenta = '#e07de0'
 cyan    = '#5ffdff'
 white   = '#feffff'
+
+[window]
+decorations = "none"
+dynamic_padding = true
+#padding.x = 0
+#padding.y = 0
+
+
