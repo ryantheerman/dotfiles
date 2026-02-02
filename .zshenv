@@ -8,6 +8,8 @@ export PATH=$PATH:/$HOME/scripts/
 export PATH=$PATH:/$HOME/scripts/cron
 export PATH=$PATH:/$HOME/scripts/i3status_init
 export PATH=$PATH:/usr/bin/ncspot
+export PATH="$HOME/.local/bin:$PATH"
+
 
 # bc defaults
 export BC_ENV_ARGS=/$HOME/.bc
@@ -17,6 +19,23 @@ export GREP_COLOR='01:31'
 
 # postgres variables
 export PGUSER="datalord"
+
+# live wallpaper
+export LIVE_WALLPAPER_WORKSPACE=$HOME/videos/animated-wallpapers/snowfall.mp4
+export LIVE_WALLPAPER_BACKDROP=$HOME/videos/animated-wallpapers/snowfall.mp4
+
+#export LIVE_WALLPAPER_WORKSPACE=$HOME/videos/animated-wallpapers/waves.mp4
+#export LIVE_WALLPAPER_BACKDROP=$HOME/videos/animated-wallpapers/waves.3840x2160.mp4
+
+#export LIVE_WALLPAPER_WORKSPACE=$HOME/videos/animated-wallpapers/night-sky.mp4
+#export LIVE_WALLPAPER_BACKDROP=$HOME/videos/animated-wallpapers/night-sky.mp4
+
+#export PAPER_1=/mnt/nfs/extra/ytdl/l5.mp4
+#export PAPER_2=/mnt/nfs/extra/ytdl/uncon.mp4
+#export PAPER_3=/mnt/nfs/extra/ytdl/l2.mp4
+#export PAPER_4=/mnt/nfs/extra/ytdl/desen.mp4
+#export PAPER_5=/mnt/nfs/extra/ytdl/l4.mp4
+#export PAPER_6=/mnt/nfs/extra/ytdl/l3.mp4
 
 ## Colored man pages ##
 #export LESS='-R --use-color -Dd+r$Du+g$'
