@@ -1,0 +1,13 @@
+default-timeout=10000
+# ignores timeouts sent by notifications, uses default above instead
+ignore-timeout=1 
+font=3270 Nerd Font Mono
+text-alignment=left
+
+
+[app-name="elecwhat"]
+default-timeout=0
+background-color=#1B5E20
+text-color=#ffffff
+border-color=#0D3D11
+
