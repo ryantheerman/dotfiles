@@ -1,0 +1,4 @@
+spawn-at-startup "swww-daemon"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/match/pictures/backgrounds/river-blur.png"
+//spawn-at-startup "/home/match/scripts/wallpaper.sh" "river.png"
+//spawn-at-startup "/home/match/scripts/mpvpaper-wrapper.sh"

@@ -1,0 +1,148 @@
+// Window rules let you adjust behavior for individual windows.
+// Find more information on the wiki:
+// https://yalter.github.io/niri/Configuration:-Window-Rules
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+/-window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+// Open the Firefox picture-in-picture player as floating by default.
+/-window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+// Example: block out two password managers from screen capture.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
+
+window-rule {
+    default-column-width { proportion 1.0; }
+    geometry-corner-radius 0
+    clip-to-geometry true
+    draw-border-with-background false
+    opacity 0.9
+}
+
+/-window-rule {
+    default-column-width { proportion 1.0; }
+    match app-id="Alacritty"
+    opacity 0.8
+}
+
+// ## browsers ## 
+window-rule {
+    match app-id="zen-browser"
+ //   open-on-workspace "browser"
+    // opacity 0.9
+}
+window-rule {
+    match app-id="firefox"
+ //   open-on-workspace "browser"
+    // opacity 1.0
+}
+window-rule {
+    match title="Chromium"
+ //   open-on-workspace "browser"
+}
+
+// ## chat ##
+window-rule {
+    match title="elecwhat"
+ //   open-on-workspace "chat"
+    // opacity 0.95
+}
+window-rule {
+    match title="Discord"
+ //   open-on-workspace "chat"
+    // opacity 0.95
+}
+window-rule {
+    match title="Fractal"
+ //   open-on-workspace "chat"
+    // opacity 0.95
+}
+
+// ## code ##
+window-rule {
+    match title="VSCodium"
+ //   open-on-workspace "code"
+    // opacity 0.95
+}
+window-rule {
+    match app-id="jetbrains-idea-ce"
+ //   open-on-workspace "code"
+    // opacity 0.95
+}
+
+// ## machines ##
+window-rule {
+    match app-id="virt-manager"
+ //   open-on-workspace "machines"
+    // opacity 0.95
+}
+window-rule {
+    match app-id="com.moonlight_stream.Moonlight"
+ //   open-on-workspace "machines"
+    // opacity 0.95
+}
+window-rule {
+    match title="wlroots - WL-1"
+ //   open-on-workspace "machines"
+    // opacity 0.95
+}
+
+// ## media ##
+window-rule {
+    match app-id="phototonic"
+ //   open-on-workspace "media"
+    // opacity 0.95
+}
+window-rule {
+    match app-id="vlc"
+ //   open-on-workspace "media"
+    // opacity 0.95
+}
+window-rule {
+    match app-id="com.obsproject.Studio"
+ //   open-on-workspace "media"
+    // opacity 0.95
+}
+window-rule {
+    match app-id="Tenacity"
+ //   open-on-workspace "media"
+    // opacity 0.95
+}
+
+// ## office ##
+window-rule {
+    match title="LibreOffice"
+//    open-on-workspace "office"
+    // opacity 0.95
+}
+
+//workspace "primary"
+//workspace "browser"
+//workspace "chat"
+//workspace "code"
+//workspace "machines"
+//workspace "media"
+//workspace "office"
+//workspace "settings"
