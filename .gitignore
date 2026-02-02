@@ -124,3 +124,16 @@ non-aur
 .librewolf
 .config/i3status/brightness
 go/
+.mutt/
+.mail
+.config/wireshark
+.config/wasistlos
+.config/termshark/
+.config/qt5ct/colors/
+.config/fling/usage.yml
+.config/elecwhat
+.config/easyeffects/db
+.config/discord
+.config/dgop
+.config/ZapZap
+.config/Electron
