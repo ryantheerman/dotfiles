@@ -19,6 +19,7 @@ set number
 set linebreak
 "set mouse=a
 "set paste
+set autoindent
 
 "leader key
 let mapleader=","
