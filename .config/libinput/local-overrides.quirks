@@ -1,0 +1,5 @@
+[Disable middle click]
+MatchName=SYNA801A:00 06CB:CEC6 Touchpad
+AttributeClickMethod=none
+AttributeMiddleEmulation=false
+
