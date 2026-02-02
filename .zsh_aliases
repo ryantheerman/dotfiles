@@ -28,9 +28,15 @@ alias mt="main-tmux.sh"
 # run network-tmux.sh
 alias nt="network-tmux.sh"
 
+# run homeserver.sh
+alias conn="ssh-mux.sh"
+
 # run dev-tmux.sh
 alias dt="dev-tmux.sh"
 
+# open sicp racket file
+alias st='~/scripts/sicp-tmux.sh'
+alias sicp='~/scripts/sicp.sh'
 
 
 #console output color
@@ -60,8 +66,16 @@ alias gpud='sudo envycontrol -s nvidia'
 # sudo with environment configs
 alias sudo='sudo -E'
 
+# for procuring an ip from the dhcp server on the enp0s31f6 interface
+alias net-restart='restart-network.sh'
+
 # spotify tui
 alias spotify='ncspot'
 
-# open sicp racket file
-alias sicp='~/scripts/sicp-tmux.sh'
+#alias swaylock='swaylock -i pictures/backgrounds/river-blur.png --clock --indicator --datestr %F --font "3270 Nerd Font Mono" --indicator-radius 100 --effect-vignette .1:.9 --indicator-thickness 5 --inside-color 00000000 --inside-clear-color 00000000 --inside-wrong-color 00000000 --inside-ver-color 00000000 --text-color ffffff --text-clear-color ffffff --text-ver-color ffffff --text-wrong-color ff0000 --grace 3 --key-hl-color ffffff --ring-clear-color ffffff --bs-hl-color ffffff'
+
+alias fuck='sudo !!'
+
+# copy/paste
+alias wcopy=wl-copy
+alias wpaste=wl-paste

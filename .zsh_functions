@@ -1,3 +1,9 @@
+feh() {
+    nohup feh --fullscreen --auto-zoom --info "echo %n" --draw-filename "$@" >/dev/null 2>&1 &
+}
+
+
+
 readMoon() {
     while IFS= read -r line; do
         echo "$line"
