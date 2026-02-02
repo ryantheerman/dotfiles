@@ -1,0 +1,27 @@
+swayidle -w
+    timeout 630 'niri msg action power-off-monitors'
+    timeout 600 'swaylock -i river-blur.png
+    timeout 900 'systemctl suspend-then-hibernate' lock 'swaylock -i river-blur.png
+    before-sleep 'swaylock -i river-blur.png 
+
+swaylock 
+    -i /home/match/pictures/backgrounds/river-blur.png 
+    --clock 
+    --indicator 
+    --font "3270 Nerd Font Mono" 
+    --datestr %%F 
+    --indicator-radius 100 
+    --effect-vignette .1:.9 
+    --indicator-thickness 5 
+    --inside-color 00000000 
+    --inside-clear-color 00000000 
+    --inside-wrong-color 00000000 
+    --inside-ver-color 00000000 
+    --text-color ffffff 
+    --text-clear-color ffffff 
+    --text-ver-color ffffff 
+    --text-wrong-color ff0000 
+    --grace 3 
+    --key-hl-color ffffff 
+    --ring-clear-color ffffff 
+    --bs-hl-color ffffff
