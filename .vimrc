@@ -62,6 +62,7 @@ hi question ctermfg=darkblue
 hi note ctermfg=darkgreen
 hi reference ctermfg=yellow
 hi warning ctermfg=darkred
+hi Comment ctermfg=yellow
 augroup CustomHighlights
   autocmd!
   autocmd VimEnter,WinEnter,BufWinEnter * syntax match question  /.*??.*/
