@@ -76,6 +76,8 @@ input {
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Outputs
 // Remember to uncomment the node by removing "/-"!
+
+// ## onboard monitor
 output "eDP-1" {
     // Uncomment this line to disable this output.
     // off
@@ -109,6 +111,19 @@ output "eDP-1" {
     position x=2200 y=1440
 }
 
+// ## hdmi connected 27 inch monitor on filing cabinet
+output "Dell Inc. DELL U2723QE 1SS19P3" {
+    //off
+
+//    mode "3840x2160"
+    mode "2560x1440"
+    scale 1
+    transform "normal"
+//    position x=3840 y=0
+    position x=4120 y=500
+}
+
+// ## dp daisy chained 32 inch monitor wall mounted on right
 output "Dell Inc. DELL U3223QE 6F129P3" {
     //off
 
@@ -120,6 +135,7 @@ output "Dell Inc. DELL U3223QE 6F129P3" {
     position x=2560 y=0
 }
 
+// ## dp connected 32 inch monitor wall mounted on left
 output "Dell Inc. DELL U3223QE 8M79K04" {
 //output "DP-11" {
     //off
@@ -485,15 +501,15 @@ window-rule {
 // ## browsers ## 
 window-rule {
     match app-id="zen-browser"
-//    open-on-output "Dell Inc. DELL U3223QE 8M79K04" // left monitor
-    open-on-output "Dell Inc. DELL U3223QE 6F129P3" // right monitor
+    open-on-output "Dell Inc. DELL U3223QE 8M79K04" // left monitor
+//    open-on-output "Dell Inc. DELL U3223QE 6F129P3" // right monitor
 //    open-fullscreen true
     // opacity 0.9
 }
 window-rule {
     match app-id="firefox"
-    open-on-output "Dell Inc. DELL U3223QE 6F129P3" // right monitor
-//    open-on-output "Dell Inc. DELL U3223QE 8M79K04" // left monitor
+//    open-on-output "Dell Inc. DELL U3223QE 6F129P3" // right monitor
+    open-on-output "Dell Inc. DELL U3223QE 8M79K04" // left monitor
     // opacity 1.0
 }
 window-rule {
@@ -856,6 +872,10 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+}
+
+recent-windows {
+    off
 }
 
 //include "opaque.kdl"
