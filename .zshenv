@@ -4,11 +4,21 @@
 export EDITOR=/usr/bin/vim
 
 # scripts
-export PATH=$PATH:/$HOME/scripts/
-export PATH=$PATH:/$HOME/scripts/cron
-export PATH=$PATH:/$HOME/scripts/i3status_init
-export PATH=$PATH:/usr/bin/ncspot
-export PATH="$HOME/.local/bin:$PATH"
+#export PATH=$PATH:/$HOME/scripts/
+#export PATH=$PATH:/$HOME/scripts/cron
+#export PATH=$PATH:/$HOME/scripts/i3status_init
+#export PATH=$PATH:/usr/bin/ncspot
+#export PATH="$HOME/.local/bin:$PATH"
+
+typeset -U path  # Deduplicate array
+path=(
+        $HOME/.local/bin
+        $HOME/scripts
+        $HOME/scripts/cron
+        $HOME/scripts/i3status_init
+        /usr/bin/ncspot
+        $path  # Existing system paths
+    )
 
 
 # bc defaults

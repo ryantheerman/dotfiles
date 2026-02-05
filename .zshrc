@@ -2,7 +2,7 @@
 # zsh
 source ~/.zsh_aliases
 source ~/.zsh_functions
-source ~/.zshenv
+#source ~/.zshenv
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
