@@ -120,7 +120,7 @@ output "Dell Inc. DELL U2723QE 1SS19P3" {
     scale 1
     transform "normal"
 //    position x=3840 y=0
-    position x=4120 y=500
+    position x=5120 y=0
 }
 
 // ## dp daisy chained 32 inch monitor wall mounted on right
