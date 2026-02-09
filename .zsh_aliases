@@ -22,8 +22,8 @@ alias batt="batt.sh"
 
 
 ### TMUX INSTANCES ###
-# run main-tmux.sh
-alias mt="main-tmux.sh"
+# run workshop.sh
+alias workshop="workshop.sh"
 
 # run network-tmux.sh
 alias nt="network-tmux.sh"
@@ -70,7 +70,7 @@ alias sudo='sudo -E'
 alias net-restart='restart-network.sh'
 
 # spotify tui
-alias spotify='ncspot'
+alias spotify='spotify-tmux.sh'
 
 #alias swaylock='swaylock -i pictures/backgrounds/river-blur.png --clock --indicator --datestr %F --font "3270 Nerd Font Mono" --indicator-radius 100 --effect-vignette .1:.9 --indicator-thickness 5 --inside-color 00000000 --inside-clear-color 00000000 --inside-wrong-color 00000000 --inside-ver-color 00000000 --text-color ffffff --text-clear-color ffffff --text-ver-color ffffff --text-wrong-color ff0000 --grace 3 --key-hl-color ffffff --ring-clear-color ffffff --bs-hl-color ffffff'
 
