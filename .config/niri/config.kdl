@@ -335,7 +335,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "wlsunset" "-l" "40" "-L" "-83"
 
 // start alacritty with main-tmux running
-spawn-at-startup "alacritty" "--title" "workshop" "-e" "main-tmux.sh"
+spawn-at-startup "alacritty" "--title" "workshop" "-e" "workshop.sh"
 
 // ## xwayland-satellite (enables screen sharing/recording)
 xwayland-satellite {
@@ -346,7 +346,8 @@ xwayland-satellite {
 // ## environment variables
 environment {
     // qt darkmode
-    QT_QPA_PLATFORMTHEME "qt5ct"
+//    QT_QPA_PLATFORMTHEME "qt5ct"
+    QT_QPA_PLATFORMTHEME "qt6ct"
     QT_STYLE_OVERRIDE "Fusion"
 
     // intellij display fix
@@ -496,6 +497,10 @@ window-rule {
     open-on-output "Dell Inc. DELL U3223QE 6F129P3" // right monitor
 }
 
+window-rule {
+    match app-id="spotify"
+    open-on-output "Dell Inc. DELL U2723QE 1SS19P3" // hdmi monitor
+}
 
 
 // ## browsers ## 
