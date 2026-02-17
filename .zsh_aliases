@@ -79,3 +79,6 @@ alias fuck='sudo !!'
 # copy/paste
 alias wcopy=wl-copy
 alias wpaste=wl-paste
+
+# start calendar on monday
+alias cal="cal -m"
