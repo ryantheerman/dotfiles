@@ -108,7 +108,7 @@ output "eDP-1" {
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
     //position x=1280 y=0
-    position x=2200 y=1440
+    position x=3200 y=1440
 }
 
 // ## hdmi connected 27 inch monitor on filing cabinet
@@ -120,7 +120,7 @@ output "Dell Inc. DELL U2723QE 1SS19P3" {
     scale 1
     transform "normal"
 //    position x=3840 y=0
-    position x=5120 y=0
+    position x=5120 y=400
 }
 
 // ## dp daisy chained 32 inch monitor wall mounted on right
