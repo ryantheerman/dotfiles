@@ -20,10 +20,14 @@ window#waybar.hidden {
 window#waybar.empty {
     background-color: transparent;
 }
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
 */
+
+/*
+window#waybar.solo {
+    background-color: rgba(43, 48, 59, 1.0);
+    background-color: #FFFFFF;
+}*/
+
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -325,3 +329,4 @@ label:focus {
 #privacy-item.audio-out {
     background-color: #0069d4;
 }
+
