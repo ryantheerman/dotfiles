@@ -883,8 +883,8 @@ recent-windows {
     off
 }
 
-//include "opaque.kdl"
+include "opaque.kdl"
 //include "wallpaper.kdl"
 //include "wallpaper-secondary.kdl"
-include "transparent.kdl"
+//include "transparent.kdl"
 include "live-wallpaper.kdl"
