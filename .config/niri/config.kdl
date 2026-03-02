@@ -248,8 +248,8 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         // off
 
-        width 2
-        active-color "#7fc8ff"
+        width 1
+        active-color "#cc0000"
 //        inactive-color "#505050"
         inactive-color "#000000"
 
@@ -324,9 +324,9 @@ spawn-at-startup "waybar"
 //spawn-sh-at-startup "waybar-wrapper.sh"
 
 // start workspace wallpaper daemon
-//spawn-at-startup "swww-daemon"
+spawn-at-startup "swww-daemon"
 // start overview wallpaper daemon
-//spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/match/pictures/backgrounds/river-blur.png"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/match/pictures/backgrounds/river-blur.png"
 
 //spawn-at-startup "mpvpaper" "-o" "no-audio" "-o" "--panscan=1.0" "ALL" "~/videos/animated-wallpapers/snowfall-in-forest.960x540.mp4"
 
@@ -410,12 +410,12 @@ gestures {
 }
 
 layer-rule {
-//    match namespace="^wallpaper$"
-    match namespace="^mpvpaper-backdrop$"
+    match namespace="^wallpaper$"
+//    match namespace="^mpvpaper-backdrop$"
     place-within-backdrop true
 }
 
-layer-rule {
+/-layer-rule {
     match namespace="^mpvpaper$"
     place-within-backdrop false
 }
@@ -884,7 +884,7 @@ recent-windows {
 }
 
 include "opaque.kdl"
-//include "wallpaper.kdl"
+include "wallpaper.kdl"
 //include "wallpaper-secondary.kdl"
 //include "transparent.kdl"
-include "live-wallpaper.kdl"
+//include "live-wallpaper.kdl"
