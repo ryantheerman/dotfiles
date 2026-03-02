@@ -139,3 +139,4 @@ go/
 .config/Electron
 wip/
 .viminfo.tmp
+.viminf*
