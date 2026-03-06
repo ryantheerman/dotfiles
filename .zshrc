@@ -27,6 +27,7 @@ precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats 'git:[%b] '
 setopt PROMPT_SUBST
 #PROMPT='%F{blue}% %n@%m ~%f %F{red}${vcs_info_msg_0_}%f> '
+#PROMPT='%F{magenta}%n@%m %F{blue}%~%b%f %F{red}%B${vcs_info_msg_0_}%b%f> '
 PROMPT='%F{green}%n@%m %F{blue}%~%b%f %F{red}%B${vcs_info_msg_0_}%b%f> '
 
 # Get color support for 'less'

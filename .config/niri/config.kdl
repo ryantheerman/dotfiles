@@ -249,8 +249,9 @@ layout {
         // off
 
         width 1
-        active-color "#cc0000"
-//        inactive-color "#505050"
+        active-color "#cc0000" //red 
+//        active-color "#ff00ff" //magenta
+//        inactive-color "#505050" //blue
         inactive-color "#000000"
 
         // Color of the border around windows that request your attention.
