@@ -53,8 +53,8 @@ hi MatchParen cterm=BOLD ctermfg=black ctermbg=darkgreen
 
 " cursorline highlighting
 set cursorline
-hi CursorLine cterm=NONE ctermbg=22 ctermfg=15
-hi CursorLineNr term=bold cterm=NONE ctermbg=22 ctermfg=15
+"hi CursorLine cterm=NONE ctermbg=22 ctermfg=15
+"hi CursorLineNr term=bold cterm=NONE ctermbg=22 ctermfg=15
 " figure out keyboard shortcut for toggling cursorline
 
 "custom highlighting
@@ -116,9 +116,19 @@ nmap <C-h>r <Plug>SetTmuxVars
 "racket specifics
 augroup racket_specifics
   autocmd!
-  autocmd FileType racket setlocal nocursorline
+"  autocmd FileType racket setlocal nocursorline
   autocmd filetype lisp,scheme,art,racket setlocal equalprg=scmindent.rkt
   "figure out disabling paren default paren highlighting for racket files
+augroup END
+
+augroup autopairs_scheme
+  autocmd!
+  autocmd FileType scheme,racket,lisp,art let b:AutoPairs = {
+    \ '(': ')',
+    \ '[': ']',
+    \ '{': '}',
+    \ '"': '"'
+    \ }
 augroup END
 
 "disable auto comment globally
