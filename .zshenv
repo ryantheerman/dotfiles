@@ -35,3 +35,5 @@ export LIVE_WALLPAPER_BACKDROP=$HOME/videos/animated-wallpapers/snowfall.mp4
 ## Colored man pages ##
 export MANPAGER="less -R --use-color -Dd+b -Du+y"
 export MANROFFOPT="-P -c"
+
+export LIBVIRT_DEFAULT_URL="qemu:///system"
