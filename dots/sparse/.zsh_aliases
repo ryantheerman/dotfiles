@@ -1,0 +1,54 @@
+# output entire history
+alias history="history 0"
+
+# kill xserver
+alias killx="pkill -15 Xorg"
+
+# swap kb layout between us and us dvorak
+alias kb="kb_layout.sh"
+
+# open daybook in vim
+alias daybook="vim ~/notes/daybook"
+
+
+# file system ctl verbose flags
+#alias mv="mv -v"
+#alias cp="cp -v"
+#alias mkdir="mkdir -v"
+#alias rmdir="rmdir -v"
+#alias rm="rm -v"
+
+
+### TMUX INSTANCES ###
+alias mux='tmux.sh'
+
+
+#console output color
+#alias ls='ls --color=auto'
+#alias dir'dir --color=auto'
+#alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# output usage stats for the drives I care about
+alias dfx='df -H -x tmpfs -x efivarfs'
+
+
+# vcs trigger to add dotfile to git tracked repo
+alias git-dotfiles="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.dotfiles --work-tree=$HOME"
+alias git-scripts="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.scripts --work-tree=$HOME/scripts"
+alias git-notes="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.notes --work-tree=$HOME/notes"
+alias git-pacman="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.pacman --work-tree=/etc/pacman.d/hooks"
+
+# set active gpu to integrated gpu
+alias gpui='sudo envycontrol -s integrated'
+
+# set active gpu to discrete gpu
+alias gpud='sudo envycontrol -s nvidia'
+
+# sudo with environment configs
+alias sudo='sudo -E'
+
+# spotify tui
+alias spotify='ncspot'

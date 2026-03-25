@@ -140,3 +140,4 @@ go/
 wip/
 .viminfo.tmp
 .viminf*
+dots/utilities/zsh-syntax-highlighting
