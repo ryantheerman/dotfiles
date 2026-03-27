@@ -336,7 +336,7 @@ spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/match/pictures/backgrounds/riv
 spawn-at-startup "wlsunset" "-l" "40" "-L" "-83"
 
 // start alacritty with main-tmux running
-spawn-at-startup "alacritty" "--title" "workshop" "-e" "workshop.sh"
+spawn-at-startup "alacritty" "--title" "workshop" "-e" "launch-workshop.sh"
 
 // ## xwayland-satellite (enables screen sharing/recording)
 xwayland-satellite {
