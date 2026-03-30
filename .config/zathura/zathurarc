@@ -15,3 +15,6 @@ set database sqlite
 #set scroll-step 10
 
 set adjust-open "width"
+
+# enable copy to clipboard
+set selection-clipboard clipboard
