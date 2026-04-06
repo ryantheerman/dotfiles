@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=alacritty --title workshop -e /home/match/scripts/launch-workshop.sh
+Name=workshop

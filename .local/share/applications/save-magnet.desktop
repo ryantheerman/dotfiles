@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Save Magnet Link
+Exec=/home/match/scripts/magnet-dl.sh
+Type=Application
+NoDisplay=true
+MimeType=x-scheme-handler/magnet;

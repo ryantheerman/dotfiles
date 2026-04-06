@@ -43,7 +43,9 @@
 .lesshst
 .local/*
 !.local/share/
+.local/share/*
 !.local/share/applications/
+.local/share/applications/*
 !.local/share/applications/homeserver.desktop
 !.local/share/applications/storage.desktop
 !.local/share/applications/arch-gamebox.desktop

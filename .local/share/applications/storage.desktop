@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/home/match/scripts/machine-focus.sh storage
+Name=machines storage

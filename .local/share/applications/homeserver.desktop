@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+#Exec=alacritty --title homeserver -e /home/match/scripts/ssh-mux.sh homeserver
+Exec=/home/match/scripts/machine-focus.sh homeserver
+Name=machines homeserver

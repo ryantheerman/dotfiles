@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+#Exec=alacritty --title claudebox-local -e /home/match/scripts/launch-claudevm.sh
+#Exec=alacritty --title claudebox-local -e /home/match/scripts/ssh-mux.sh claudebox
+Exec=/home/match/scripts/machine-focus.sh claudebox-local
+Name=machines claudebox-local
