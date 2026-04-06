@@ -1,7 +1,9 @@
 # zsh environment variables
 
 # editor
-export EDITOR=/usr/bin/vim
+#export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
 
 # scripts
 
