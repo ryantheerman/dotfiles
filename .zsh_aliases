@@ -7,8 +7,8 @@ alias killx="pkill -15 Xorg"
 # swap kb layout between us and us dvorak
 alias kb="kb_layout.sh"
 
-# open daybook in vim
-alias daybook="vim ~/notes/daybook"
+# open daybook in nvim
+alias daybook="nvim ~/notes/daybook"
 
 # check battery level
 alias batt="batt.sh"
