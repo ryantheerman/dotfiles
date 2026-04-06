@@ -22,7 +22,7 @@ set linebreak
 set autoindent
 
 "leader key
-let mapleader=","
+let mapleader="\\"
 nnoremap <leader>t :terminal<CR>
 
 "KEY MAPPINGS
