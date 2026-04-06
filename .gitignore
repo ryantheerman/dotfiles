@@ -41,7 +41,16 @@
 .jbr/
 .kotlinc_history
 .lesshst
-.local/
+.local/*
+!.local/share/
+!.local/share/applications/
+!.local/share/applications/homeserver.desktop
+!.local/share/applications/storage.desktop
+!.local/share/applications/arch-gamebox.desktop
+!.local/share/applications/claudebox-local.desktop
+!.local/share/applications/claudebox-server.desktop
+!.local/share/applications/workshop.desktop
+!.local/share/applications/save-magnet.desktop
 .m2/
 .mozilla/
 .npm/
