@@ -29,7 +29,7 @@ alias workshop="workshop.sh"
 alias nt="network-tmux.sh"
 
 # run homeserver.sh
-alias conn="ssh-mux.sh"
+alias conn="machine-tmux.sh"
 
 # run dev-tmux.sh
 alias dt="dev-tmux.sh"
