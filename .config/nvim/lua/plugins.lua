@@ -22,7 +22,17 @@ require("lazy").setup({
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require('telescope').setup({})
+      require('telescope').setup({
+        pickers = {
+          buffers = {
+            mappings = {
+              n = {
+                ["d"] = require("telescope.actions").delete_buffer,
+              },
+            }
+          }
+        }
+      })
     end,
   },
 
@@ -178,7 +188,7 @@ require("lazy").setup({
         function()
           local bufs = vim.api.nvim_list_bufs()
           for _, buf in ipairs(bufs) do
-            if vim.bo[buf].filetype == "NvimTree" then
+            if vim.bo[buf].filetype == "NvimTree" or vim.bo[buf].buftype == "terminal" then
               vim.api.nvim_buf_delete(buf, { force = true })
             end
           end

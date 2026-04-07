@@ -10,10 +10,10 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "Comment",   { fg = "yellow" })
     vim.api.nvim_set_hl(0, "CursorLine",   { underline = true })
     vim.api.nvim_set_hl(0, "CursorLineNr", { underline = true })
+--    vim.api.nvim_set_hl(0, "BlackoutFloat", { bg = "#000000", blend = 70 })
+    vim.api.nvim_set_hl(0, "BlackoutFloat", { bg = "#000000" })
   end,
 })
-
--- Comments
 
 -- Custom annotation patterns
 vim.api.nvim_set_hl(0, "blue", { fg = "blue" })
