@@ -23,11 +23,23 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require('telescope').setup({
+        defaults = {
+          mappings = {
+            i = {
+              ["<Tab>"] = require("telescope.actions").move_selection_previous,
+              ["<S-Tab>"] = require("telescope.actions").move_selection_next,
+            },
+            n = {
+              ["<Tab>"] = require("telescope.actions").move_selection_previous,
+              ["<S-Tab>"] = require("telescope.actions").move_selection_next,
+            },
+          }
+        },
         pickers = {
           buffers = {
             mappings = {
               n = {
-                ["d"] = require("telescope.actions").delete_buffer,
+                ["x"] = require("telescope.actions").delete_buffer,
               },
             }
           }

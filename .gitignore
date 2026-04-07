@@ -152,4 +152,3 @@ wip/
 .viminfo.tmp
 .viminf*
 dots/utilities/zsh-syntax-highlighting
-.config/nvim/lazy-lock.json
