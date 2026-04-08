@@ -29,6 +29,8 @@ opt.spellcapcheck  = ""
 opt.mouse      = ""
 opt.signcolumn     = "yes"
 opt.cmdheight=0
+opt.splitbelow = true
+opt.splitright = true
 
 -- Disable auto-comment continuation on new lines
 vim.api.nvim_create_autocmd("FileType", {

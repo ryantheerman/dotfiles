@@ -29,6 +29,7 @@ map("n", "<leader>t", function()
     zindex = 49,
   })
   vim.api.nvim_set_option_value("winblend", 50, { win = backdrop_win })
+  vim.api.nvim_set_option_value("winhighlight", "Normal:BlackoutFloat", { win = backdrop_win })
 
   -- terminal config
   local buf = vim.api.nvim_create_buf(false, true)
@@ -73,9 +74,9 @@ map("n", "<leader>u", ":NvimTreeFocus<CR>",  { noremap = true, silent = true })
 
 -- telescope plugin
 map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { noremap = true })
-map("n", "<leader>bb", "<cmd>Telescope buffers<CR>",    { noremap = true })
-map("n", "<leader>gg", "<cmd>Telescope live_grep<CR>",  { noremap = true })
-map("n", "<leader>rr", "<cmd>Telescope oldfiles<CR>",   { noremap = true })
+map("n", "<leader>fb", "<cmd>Telescope buffers<CR>",    { noremap = true })
+map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>",  { noremap = true })
+map("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>",   { noremap = true })
 
 -- tslime plugin
 map("v", "<C-h><C-t>", "<Plug>SendSelectionToTmux", {})

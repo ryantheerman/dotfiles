@@ -16,3 +16,6 @@ require("settings")
 require("keymaps")
 require("highlights")
 require("plugins")
+
+--vim.cmd("colorscheme citruszest")
+--vim.cmd("colorscheme bluloco-dark")

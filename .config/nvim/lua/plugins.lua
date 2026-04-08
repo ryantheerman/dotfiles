@@ -178,10 +178,32 @@ require("lazy").setup({
     lazy = false,
     priority = 1000,
     config = function()
-    vim.cmd("colorscheme kanagawa-dragon")
+--    vim.cmd("colorscheme kanagawa-dragon")
 --    vim.cmd("colorscheme kanagawa-lotus")
     end,
   },
+
+  {
+    'uloco/bluloco.nvim',
+    lazy = false,
+    priority = 1000,
+    dependencies = { 'rktjmp/lush.nvim' },
+    config = function()
+      vim.opt.termguicolors = true
+      vim.cmd('colorscheme bluloco-dark')
+      -- your optional config goes here, see below.
+      -- use these to switch the colorscheme at runtime
+        -- :colorscheme bluloco-dark
+        -- :colorscheme bluloco-light
+    end,
+  },
+
+  {
+    "zootedb0t/citruszest.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
 
   {
     "rmagatti/auto-session",
@@ -208,6 +230,74 @@ require("lazy").setup({
       },
     })
     end,
+  },
+
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      delay = 500,  -- ms after prefix before popup appears
+      spec = {
+        { "<leader>f", group = "find" },
+        { "<leader>g", group = "git" },
+        -- add others as you build them out
+      },
+    },
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "BufReadPre",
+    opts = {
+      signs = {
+        add          = { text = "▎" },
+        change       = { text = "▎" },
+        delete       = { text = "▁" },
+        topdelete    = { text = "▔" },
+        changedelete = { text = "▎" },
+      },
+      on_attach = function(bufnr)
+        local gs = package.loaded.gitsigns
+        local map = function(l, r, desc)
+          vim.keymap.set("n", l, r, { buffer = bufnr, desc = desc })
+        end
+  
+        map("]h", gs.next_hunk,       "Next hunk")
+        map("[h", gs.prev_hunk,       "Prev hunk")
+        map("<leader>gs", gs.stage_hunk,      "Git stage hunk")
+        map("<leader>gr", gs.reset_hunk,      "Git reset hunk")
+        map("<leader>gS", gs.stage_buffer,    "Git stage buffer")
+        map("<leader>gu", gs.undo_stage_hunk, "Git undo stage")
+        map("<leader>gv", gs.preview_hunk,    "Git preview hunk")
+      end,
+    },
+  },
+
+--  {
+--    "sindrets/diffview.nvim",
+--    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
+--    keys = {
+--      { "<leader>gd", "<cmd>DiffviewOpen<cr>",             desc = "Git diff working tree" },
+--      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>",    desc = "Git file history" },
+--      { "<leader>gH", "<cmd>DiffviewFileHistory<cr>",      desc = "Git repo history" },
+--      { "<leader>gx", "<cmd>DiffviewClose<cr>",            desc = "Git close diffview" },
+--    },
+--  },
+
+  {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
+    keys = {
+      { "<leader>gd", function()
+          if next(require("diffview.lib").views) == nil then
+            vim.cmd("DiffviewOpen")
+          else
+            vim.cmd("DiffviewClose")
+          end
+        end, desc = "Git diff toggle" },
+      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", desc = "Git file history" },
+      { "<leader>gH", "<cmd>DiffviewFileHistory<cr>",   desc = "Git repo history" },
+    },
   },
 
 })
