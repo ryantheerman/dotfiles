@@ -82,3 +82,5 @@ alias wpaste=wl-paste
 
 # start calendar on monday
 alias cal="cal -m"
+
+alias vim=nvim
