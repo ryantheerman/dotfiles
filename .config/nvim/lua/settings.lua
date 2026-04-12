@@ -28,7 +28,7 @@ opt.spelllang      = { "en" }
 opt.spellcapcheck  = ""
 opt.mouse      = ""
 opt.signcolumn     = "yes"
-opt.cmdheight=0
+opt.cmdheight=1 -- TODO: figure out how to set this to 0 but not lose all the recording, yanking, search info i need
 opt.splitbelow = true
 opt.splitright = true
 
