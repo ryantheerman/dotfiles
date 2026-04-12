@@ -52,10 +52,10 @@ alias dfx='df -H -x tmpfs -x efivarfs'
 
 
 # vcs trigger to add dotfile to git tracked repo
-alias git-dots="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.dotfiles --work-tree=$HOME"
-alias git-scripts="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.scripts --work-tree=$HOME/scripts"
-alias git-notes="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.notes --work-tree=$HOME/notes"
-alias git-pacman="/usr/bin/git --git-dir=$HOME/projects/bare-repos/.pacman --work-tree=/etc/pacman.d/hooks"
+alias git-dots="/usr/bin/git --git-dir=$HOME/projects/bare-repos/dotfiles --work-tree=$HOME"
+alias git-scripts="/usr/bin/git --git-dir=$HOME/projects/bare-repos/scripts --work-tree=$HOME/scripts"
+alias git-notes="/usr/bin/git --git-dir=$HOME/projects/bare-repos/notes --work-tree=$HOME/notes"
+alias git-rem="/usr/bin/git --git-dir=$HOME/projects/bare-repos/reminders --work-tree=$HOME/.reminders"
 
 # set active gpu to integrated gpu
 alias gpui='sudo envycontrol -s integrated'
