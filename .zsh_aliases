@@ -84,3 +84,5 @@ alias wpaste=wl-paste
 alias cal="cal -m"
 
 alias vim=nvim
+
+alias tkremind="tkremind -m"
