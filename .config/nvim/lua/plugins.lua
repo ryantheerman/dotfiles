@@ -23,6 +23,7 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require('telescope').setup({
+        border = false,
         defaults = {
           mappings = {
             i = {
@@ -272,17 +273,6 @@ require("lazy").setup({
       end,
     },
   },
-
---  {
---    "sindrets/diffview.nvim",
---    cmd = { "DiffviewOpen", "DiffviewFileHistory" },
---    keys = {
---      { "<leader>gd", "<cmd>DiffviewOpen<cr>",             desc = "Git diff working tree" },
---      { "<leader>gh", "<cmd>DiffviewFileHistory %<cr>",    desc = "Git file history" },
---      { "<leader>gH", "<cmd>DiffviewFileHistory<cr>",      desc = "Git repo history" },
---      { "<leader>gx", "<cmd>DiffviewClose<cr>",            desc = "Git close diffview" },
---    },
---  },
 
   {
     "sindrets/diffview.nvim",
