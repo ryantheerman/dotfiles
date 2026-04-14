@@ -26,11 +26,47 @@ opt.spellfile      = vim.fn.expand("~/.vim/spell/en.utf-8.add")
 opt.spell          = true
 opt.spelllang      = { "en" }
 opt.spellcapcheck  = ""
-opt.mouse      = ""
 opt.signcolumn     = "yes"
-opt.cmdheight=1 -- TODO: figure out how to set this to 0 but not lose all the recording, yanking, search info i need
+opt.cmdheight=0 -- TODO: figure out how to set this to 0 but not lose all the recording, yanking, search info i need
 opt.splitbelow = true
 opt.splitright = true
+opt.showcmdloc = "statusline"
+
+-- mouse config (scrolling always enabled, any other functionality only enabled in terminal mode)
+--opt.mouse = ""
+vim.opt.mouse = "a"
+
+local nop_clicks = {
+  "<LeftMouse>", "<2-LeftMouse>", "<3-LeftMouse>",
+  "<RightMouse>", "<MiddleMouse>",
+  "<LeftDrag>", "<LeftRelease>",
+}
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    if vim.bo.buftype == "terminal" then return end
+    local buf = vim.api.nvim_get_current_buf()
+    for _, lhs in ipairs(nop_clicks) do
+      vim.keymap.set({ "n", "i", "v" }, lhs, "<Nop>", { noremap = true, buffer = buf })
+    end
+    vim.keymap.set("n", "<ScrollWheelUp>",   "2k", { noremap = true, buffer = buf })
+    vim.keymap.set("n", "<ScrollWheelDown>", "2j", { noremap = true, buffer = buf })
+    vim.keymap.set("i", "<ScrollWheelUp>",   "<C-o>2k", { noremap = true, buffer = buf })
+    vim.keymap.set("i", "<ScrollWheelDown>", "<C-o>2j", { noremap = true, buffer = buf })
+  end,
+})
+vim.api.nvim_create_autocmd("TermOpen", {
+  callback = function()
+    local buf = vim.api.nvim_get_current_buf()
+    for _, lhs in ipairs(nop_clicks) do
+      pcall(vim.keymap.del, { "n", "i", "v" }, lhs, { buffer = buf })
+    end
+    pcall(vim.keymap.del, "n", "<ScrollWheelUp>", { buffer = buf })
+    pcall(vim.keymap.del, "n", "<ScrollWheelDown>", { buffer = buf })
+    pcall(vim.keymap.del, "i", "<ScrollWheelUp>", { buffer = buf })
+    pcall(vim.keymap.del, "i", "<ScrollWheelDown>", { buffer = buf })
+  end,
+})
 
 -- Disable auto-comment continuation on new lines
 vim.api.nvim_create_autocmd("FileType", {
@@ -93,3 +129,19 @@ vim.keymap.set("n", "<leader>cc", function()
   local cmp = require("cmp")
   cmp.setup({ enabled = not cmp.get_config().enabled })
 end, { noremap = true })
+
+-- configure yank output so i can send it to statusline with lualine
+local yank_timer = nil
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    local count = vim.v.event.regcontents and #vim.v.event.regcontents or 0
+    if count > 0 then
+      vim.g.yank_msg = count .. " line" .. (count == 1 and "" or "s") .. " yanked"
+    end
+    if yank_timer then yank_timer:stop() end
+    yank_timer = vim.defer_fn(function()
+      vim.g.yank_msg = ""
+      vim.cmd("redrawstatus")
+    end, 5000)
+  end,
+})

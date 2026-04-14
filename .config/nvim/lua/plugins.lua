@@ -290,4 +290,54 @@ require("lazy").setup({
     },
   },
 
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      options = {
+        icons_enabled = false,
+--        theme = "auto",
+
+        theme = function()
+          local theme = require("lualine.themes.auto")
+          theme.normal.a  = { bg = "#4a9e4e", fg = "#000000" }
+          theme.command.a = { bg = "#4fc1ff", fg = "#000000" }
+          return theme
+        end,
+
+        section_separators = "",
+        component_separators = "",
+      },
+      sections = {
+        lualine_a = { "mode" },
+        lualine_b = { "filename" },
+        lualine_c = {
+          {
+            function()
+              local reg = vim.fn.reg_recording()
+              if reg ~= "" then return "recording @" .. reg end
+              return ""
+            end,
+          },
+          {
+            function()
+              local ok, sc = pcall(vim.fn.searchcount, { recompute = true })
+              if not ok or sc.total == 0 then return "" end
+              if sc.incomplete == 1 then return "?/?" end
+              return sc.current .. "/" .. sc.total
+            end,
+          },
+          {
+            function() return vim.g.yank_msg or "" end,
+          },
+          {
+            "%S"
+          },
+        },
+        lualine_x = {},
+        lualine_y = { "location" },
+        lualine_z = { "progress" },
+      },
+    },
+  },
+
 })
