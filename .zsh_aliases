@@ -23,7 +23,7 @@ alias batt="batt.sh"
 
 ### TMUX INSTANCES ###
 # run workshop.sh
-alias workshop="workshop.sh"
+alias workshop="launch-workshop.sh"
 
 # run network-tmux.sh
 alias nt="network-tmux.sh"
@@ -85,4 +85,5 @@ alias cal="cal -m"
 
 alias vim=nvim
 
-alias tkremind="tkremind -m"
+# start on monday, use 24 hour clock
+alias tkremind="tkremind -m -b"

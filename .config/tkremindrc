@@ -1,5 +1,5 @@
 # TkRemind option file -- created automatically
-# Fri Apr 10 10:30:39 EDT 2026
+# Mon Apr 13 09:34:50 EDT 2026
 # Format of each line is 'key value' where 'key'
 # specifies the option name, and 'value' is a
 # *legal Tcl list element* specifying the option value.
@@ -8,7 +8,7 @@
 AutoClose 1
 
 # Default background color of calendar boxes
-BackgroundColor #646464
+BackgroundColor #414141
 
 # Font to use in calendar boxes in Tk font format
 CalboxFont {-family {Nimbus Mono PS} -size 10 -weight normal -slant roman -underline 0 -overstrike 0}
@@ -23,7 +23,7 @@ DayAnchor center
 Deiconify 0
 
 # (String) Specify command to edit a file.  %d is replaced with line number and %s with filename
-Editor {emacs +%d %s}
+Editor nvim
 
 # (String) Extra arguments when invoking remind
 ExtraRemindArgs {}
@@ -38,7 +38,7 @@ HeadingFont {-family {Nimbus Sans} -size 10 -weight normal -slant roman -underli
 LabelColor #ffffff
 
 # Color of gridlines on calendar
-LineColor #a1a1a1
+LineColor #787878
 
 # (String) Specify an e-mail address to which reminders should be sent if the popup window is not manually dismissed
 MailAddr {}
@@ -95,7 +95,7 @@ TextColor #ffffff
 TodayColor #009300
 
 # Background color of calendar window
-WinBackground #646464
+WinBackground #414141
 
 # (0/1) If 1, make printed calendars occupy at most 5 rows
 WrapCal 0
