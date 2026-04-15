@@ -36,7 +36,7 @@ live_config_reload = true
 import = [
 #    "~/.config/alacritty/alacritty-theme/themes/smoooooth.toml"
 #    "~/.config/alacritty/alacritty-theme/themes/xterm.toml"
-#    "~/.config/alacritty/alacritty-theme/themes/papercolor_dark.toml"
+    "~/.config/alacritty/alacritty-theme/themes/papercolor_dark.toml"
 #    "~/.config/alacritty/alacritty-theme/themes/palenight.toml"
 #    "~/.config/alacritty/alacritty-theme/themes/one_dark.toml"
 #    "~/.config/alacritty/alacritty-theme/themes/oceanic_next.toml"
@@ -46,39 +46,39 @@ import = [
 ]
 
 # Color theme ported from iTerm 2 Smoooooth
-[colors.primary]
-foreground = '#ffffff'
-background = '#000000'
-
-[colors.cursor]
-text = '#000000'
-cursor = '#ffffff'
-
-[colors.selection]
-text = '#000000'
-background = '#b3d7ff'
-
-[colors.normal]
-black   = '#000000'
-red     = '#b43c29'
-green   = '#00c200'
-yellow  = '#c7c400'
-blue    = '#325CC0'
-#blue    = '#c6c400'
-#blue    = '#0087ff'
-magenta = '#bf3fbd'
-cyan    = '#00c5c7'
-white   = '#c7c7c7'
-
-[colors.bright]
-black   = '#676767'
-red     = '#dc7974'
-green   = '#57e690'
-yellow  = '#ece100'
-blue    = '#a6aaf1'
-magenta = '#e07de0'
-cyan    = '#5ffdff'
-white   = '#feffff'
+#[colors.primary]
+#foreground = '#ffffff'
+#background = '#000000'
+#
+#[colors.cursor]
+#text = '#000000'
+#cursor = '#ffffff'
+#
+#[colors.selection]
+#text = '#000000'
+#background = '#b3d7ff'
+#
+#[colors.normal]
+#black   = '#000000'
+#red     = '#b43c29'
+#green   = '#00c200'
+#yellow  = '#c7c400'
+#blue    = '#325CC0'
+##blue    = '#c6c400'
+##blue    = '#0087ff'
+#magenta = '#bf3fbd'
+#cyan    = '#00c5c7'
+#white   = '#c7c7c7'
+#
+#[colors.bright]
+#black   = '#676767'
+#red     = '#dc7974'
+#green   = '#57e690'
+#yellow  = '#ece100'
+#blue    = '#a6aaf1'
+#magenta = '#e07de0'
+#cyan    = '#5ffdff'
+#white   = '#feffff'
 
 [window]
 decorations = "none"
