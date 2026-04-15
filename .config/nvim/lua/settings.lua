@@ -145,3 +145,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     end, 5000)
   end,
 })
+
+-- saves any given session managed by auto-session every 5 minutes
+local timer = vim.loop.new_timer()
+timer:start(5 * 60 * 1000, 5 * 60 * 1000, vim.schedule_wrap(function()
+  require("auto-session").SaveSession()
+end))
