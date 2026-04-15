@@ -34,8 +34,15 @@ live_config_reload = true
 
 # import theme from themes repo
 import = [
-#   "~/.config/alacritty/alacritty-theme/themes/smoooooth.toml"
-#   "~/.config/alacritty/alacritty-theme/themes/xterm.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/smoooooth.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/xterm.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/papercolor_dark.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/palenight.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/one_dark.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/oceanic_next.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/citylights.toml"
+#    "~/.config/alacritty/alacritty-theme/themes/dark_plus.toml"
+    
 ]
 
 # Color theme ported from iTerm 2 Smoooooth
