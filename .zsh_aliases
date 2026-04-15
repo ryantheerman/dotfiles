@@ -86,4 +86,4 @@ alias cal="cal -m"
 alias vim=nvim
 
 # start on monday, use 24 hour clock
-alias tkremind="tkremind -m -b"
+alias tkremind="tkremind -m -b1"
