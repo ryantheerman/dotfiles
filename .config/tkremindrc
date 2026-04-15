@@ -1,5 +1,5 @@
 # TkRemind option file -- created automatically
-# Mon Apr 13 09:34:50 EDT 2026
+# Tue Apr 14 09:50:41 EDT 2026
 # Format of each line is 'key value' where 'key'
 # specifies the option name, and 'value' is a
 # *legal Tcl list element* specifying the option value.
@@ -80,7 +80,7 @@ RunCmd {}
 SMTPServer 127.0.0.1
 
 # (0/1) If 1, TkRemind shows all of today's non-timed reminders in a window at startup and when the date changes
-ShowTodaysReminders 1
+ShowTodaysReminders 0
 
 # (0/1) If 1, TkRemind starts up in the iconified state
 StartIconified 0
