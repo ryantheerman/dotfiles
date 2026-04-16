@@ -89,10 +89,11 @@ require("lazy").setup({
           vim.keymap.set('n', 'K', 'N', { noremap = true, buffer = bufnr })
         end
       })
---      require("mason-lspconfig").setup({
---        ensure_installed = {},
---        automatic_installation = false,
---      })
+      vim.lsp.config('lua_ls', {
+        root_dir = function(fname)
+          return vim.fs.root(fname, { '.luarc.json', '.luarc.jsonc', 'lua', '.git' })
+        end
+      })
     end,
   },
 

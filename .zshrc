@@ -25,6 +25,11 @@ bindkey -v
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats 'git:[%b] '
+zstyle ':vcs_info:*' disable-patterns \
+    "${HOME}(|/*)" \
+    "${HOME}/scripts(|/*)" \
+    "${HOME}/notes(|/*)" \
+    "${HOME}/.reminders(|/*)"
 setopt PROMPT_SUBST
 #PROMPT='%F{blue}% %n@%m ~%f %F{red}${vcs_info_msg_0_}%f> '
 #PROMPT='%F{magenta}%n@%m %F{blue}%~%b%f %F{red}%B${vcs_info_msg_0_}%b%f> '
