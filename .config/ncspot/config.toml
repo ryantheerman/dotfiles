@@ -6,6 +6,10 @@ use_nerdfont = false
 [keybindings]
 "l" = "save"
 "s" = "move right 1"
+"t" = "move up 1"
+"n" = "move down 1"
+"k" = "jumpnext"
+"j" = ""
 
 
 # bright red
