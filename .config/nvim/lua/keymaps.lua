@@ -14,6 +14,22 @@ end, { noremap = true, silent = true })
 map("n", "<C-w>s", "<C-w>l",        { noremap = true })
 map("n", "<C-w>l", "<C-w>s",        { noremap = true })
 
+-- j/J take over t/T (till-char motions, consume next keystroke)
+map({'n', 'x', 'o'}, 'j', 't', { noremap = true })
+map({'n', 'x', 'o'}, 'J', 'T', { noremap = true })
+
+-- k/K take over n/N (repeat search)
+map({'n', 'x', 'o'}, 'k', 'n', { noremap = true })
+map({'n', 'x', 'o'}, 'K', 'N', { noremap = true })
+
+-- t/T take over j/J (line movement / join)
+map({'n', 'x', 'o'}, 't', 'k', { noremap = true })
+map('n',             'T', 'K', { noremap = true })
+
+-- n/N take over k/K (line movement / keywordprg)
+map({'n', 'x', 'o'}, 'n', 'j', { noremap = true })
+map({'n', 'x', 'o'}, 'N', 'J', { noremap = true })
+
 map('n', '<leader>h', '<C-w>h',        { noremap = true })
 map('n', '<leader>s', '<C-w>l',        { noremap = true })
 map('n', '<leader>j', '<C-w>j',        { noremap = true })

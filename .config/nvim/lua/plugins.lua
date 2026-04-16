@@ -82,6 +82,17 @@ require("lazy").setup({
         ensure_installed = {},
         automatic_installation = false,
       })
+      -- applies to all LSP servers
+      vim.lsp.config('*', {
+        on_attach = function(client, bufnr)
+          vim.keymap.set('n', 'gh', vim.lsp.buf.hover, { buffer = bufnr })
+          vim.keymap.set('n', 'K', 'N', { noremap = true, buffer = bufnr })
+        end
+      })
+--      require("mason-lspconfig").setup({
+--        ensure_installed = {},
+--        automatic_installation = false,
+--      })
     end,
   },
 
