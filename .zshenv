@@ -1,18 +1,14 @@
 # zsh environment variables
 
 # editor
-#export EDITOR=/usr/bin/vim
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
-
-# scripts
 
 typeset -U path  # Deduplicate array
 path=(
         $HOME/.local/bin
         $HOME/scripts
         $HOME/scripts/cron
-        $HOME/scripts/i3status_init
         /usr/bin/ncspot
         $path  # Existing system paths
     )

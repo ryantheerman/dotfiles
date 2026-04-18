@@ -2,10 +2,12 @@
 # zsh
 source ~/.zsh_aliases
 source ~/.zsh_functions
-#source ~/.zshenv
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# zsh syntax highlighting
+source /home/match/projects/misc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 ### HISTORY ###
 HISTFILE=~/.zsh_history
@@ -31,14 +33,4 @@ zstyle ':vcs_info:*' disable-patterns \
     "${HOME}/notes(|/*)" \
     "${HOME}/.reminders(|/*)"
 setopt PROMPT_SUBST
-#PROMPT='%F{blue}% %n@%m ~%f %F{red}${vcs_info_msg_0_}%f> '
-#PROMPT='%F{magenta}%n@%m %F{blue}%~%b%f %F{red}%B${vcs_info_msg_0_}%b%f> '
 PROMPT='%F{green}%n@%m %F{blue}%~%b%f %F{red}%B${vcs_info_msg_0_}%b%f> '
-
-# Get color support for 'less'
-#export LESS="--RAW-CONTROL-CHARS"
-
-# Use colors for less, man, etc.
-#[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
-
-source /home/match/projects/misc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
