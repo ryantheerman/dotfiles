@@ -1,0 +1,3 @@
+dish() {
+    tree -La $1 $HOME/workshop/projects
+}
