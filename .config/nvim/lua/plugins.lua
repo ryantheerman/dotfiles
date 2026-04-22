@@ -239,12 +239,22 @@ require("lazy").setup({
         function()
           local bufs = vim.api.nvim_list_bufs()
           for _, buf in ipairs(bufs) do
-            if vim.bo[buf].filetype == "NvimTree" or vim.bo[buf].buftype == "terminal" then
+            if vim.bo[buf].filetype == "NvimTree" then  -- terminal removed
               vim.api.nvim_buf_delete(buf, { force = true })
             end
           end
         end
       },
+--      pre_save_cmds = {
+--        function()
+--          local bufs = vim.api.nvim_list_bufs()
+--          for _, buf in ipairs(bufs) do
+--            if vim.bo[buf].filetype == "NvimTree" or vim.bo[buf].buftype == "terminal" then
+--              vim.api.nvim_buf_delete(buf, { force = true })
+--            end
+--          end
+--        end
+--      },
     })
     end,
   },

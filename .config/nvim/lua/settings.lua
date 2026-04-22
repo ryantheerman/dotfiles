@@ -31,6 +31,7 @@ opt.cmdheight=0 -- TODO: figure out how to set this to 0 but not lose all the re
 opt.splitbelow = true
 opt.splitright = true
 opt.showcmdloc = "statusline"
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,localoptions"
 
 -- mouse config (scrolling always enabled, any other functionality only enabled in terminal mode)
 --opt.mouse = ""
