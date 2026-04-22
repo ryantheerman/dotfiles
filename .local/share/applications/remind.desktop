@@ -3,4 +3,4 @@ Version=1.0
 Type=Application
 Terminal=false
 Exec=/home/match/scripts/remind.sh
-Name=remind
+Name=workspace-remind

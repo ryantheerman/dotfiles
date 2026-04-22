@@ -53,8 +53,8 @@
 !.local/share/applications/claudebox-server.desktop
 !.local/share/applications/workshop.desktop
 !.local/share/applications/save-magnet.desktop
-!.local/share/applications/workspace-sicp.desktop
-!.local/share/applications/workspace-remind.desktop
+!.local/share/applications/sicp.desktop
+!.local/share/applications/remind.desktop
 !.local/share/applications/nvim*.desktop
 .m2/
 .mozilla/
