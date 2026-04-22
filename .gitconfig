@@ -5,3 +5,10 @@
 	defaultBranch = main
 [fetch]
 	prune = true
+
+[core]
+    pager = delta
+
+[delta]
+    side-by-side = true
+    line-numbers = true
