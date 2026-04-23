@@ -34,4 +34,12 @@ export LIVE_WALLPAPER_BACKDROP=$HOME/videos/animated-wallpapers/snowfall.mp4
 export MANPAGER="less -R --use-color -Dd+b -Du+y"
 export MANROFFOPT="-P -c"
 
+## no sudo with virsh commands
 export LIBVIRT_DEFAULT_URL="qemu:///system"
+
+## .pac* file diff customization
+export DIFFPROG="nvim -d" pacdiff
+
+## autossh logs
+export AUTOSSH_DEBUG=1
+export AUTOSSH_LOGFILE=/tmp/autossh.log
