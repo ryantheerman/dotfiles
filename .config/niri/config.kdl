@@ -108,7 +108,8 @@ output "eDP-1" {
     // If the position is unset or results in an overlap, the output is instead placed
     // automatically.
     //position x=1280 y=0
-    position x=2260 y=1440
+    //position x=2260 y=1440
+    position x=1001 y=1440
 }
 
 // ## hdmi connected 27 inch monitor on filing cabinet
