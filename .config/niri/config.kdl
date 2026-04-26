@@ -704,6 +704,18 @@ binds {
     Mod+Shift+Ctrl+T     { move-column-to-monitor-up; }
     Mod+Shift+Ctrl+S     { move-column-to-monitor-right; }
 
+    // focus / move column / move workspace to monitor
+    Mod+Ctrl+g { focus-monitor "Dell Inc. DELL U3223QE 8M79K04"; }
+    Mod+Ctrl+c { focus-monitor "Dell Inc. DELL U3223QE 6F129P3"; }
+    Mod+Ctrl+r { focus-monitor "eDP-1"; }
+    Mod+Alt+g { move-column-to-monitor "Dell Inc. DELL U3223QE 8M79K04"; }
+    Mod+Alt+c { move-column-to-monitor "Dell Inc. DELL U3223QE 6F129P3"; }
+    Mod+Alt+r { move-column-to-monitor "eDP-1"; }
+    Mod+Shift+Ctrl+g { move-workspace-to-monitor "Dell Inc. DELL U3223QE 8M79K04"; }
+    Mod+Shift+Ctrl+c { move-workspace-to-monitor "Dell Inc. DELL U3223QE 6F129P3"; }
+    Mod+Shift+Ctrl+r { move-workspace-to-monitor "eDP-1"; }
+    
+
 //    Alt+Left  { focus-monitor-left; }
 //    Alt+Down  { focus-monitor-down; }
 //    Alt+Up    { focus-monitor-up; }
@@ -827,7 +839,7 @@ binds {
     // Cycling through the presets in reverse order is also possible.
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
+    //Mod+Ctrl+R { reset-window-height; }
     //Mod+F { maximize-column; }
     Mod+F { fullscreen-window; }
 
@@ -838,7 +850,7 @@ binds {
     Mod+C { center-column; }
 
     // Center all fully visible columns on screen.
-    Mod+Ctrl+C { center-visible-columns; }
+    //Mod+Ctrl+C { center-visible-columns; }
 
     // Finer width adjustments.
     // This command can also:
