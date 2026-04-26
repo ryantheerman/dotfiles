@@ -109,7 +109,7 @@ output "eDP-1" {
     // automatically.
     //position x=1280 y=0
     //position x=2260 y=1440
-    position x=1001 y=1440
+    position x=1000 y=1440
 }
 
 // ## hdmi connected 27 inch monitor on filing cabinet
@@ -628,6 +628,9 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+
+    // zathura launcher
+    Mod+Z { spawn "/home/match/scripts/zathura-picker.sh"; }
 
     Super+Shift+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
