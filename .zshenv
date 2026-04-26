@@ -43,3 +43,6 @@ export DIFFPROG="nvim -d" pacdiff
 ## autossh logs
 export AUTOSSH_DEBUG=1
 export AUTOSSH_LOGFILE=/tmp/autossh.log
+
+## remind shortcut
+export DOTREMINDERS=$HOME/.reminders/10.rem
